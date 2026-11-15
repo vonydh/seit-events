@@ -518,7 +518,7 @@ function renderSync() {
     el.classList.add("live");
     const when = META && META.lastChecked ? new Date(META.lastChecked) : null;
     const w = when && !isNaN(when) ? `${when.getDate()} ${MON[when.getMonth()]} ${when.getFullYear()}, ${when.toLocaleTimeString([], {hour: "numeric", minute: "2-digit"})}` : "not yet";
-    t.innerHTML = `${loadState === "local" ? (/^(localhost|127.0.0.1)$/.test(location.hostname) ? "Local copy" : "Updated daily") : "Live"} · <b>${EVENTS.length} events</b> · last web check <b>${esc(w)}</b>`;
+    t.innerHTML = `${loadState === "local" ? (/^(localhost|127.0.0.1)$/.test(location.hostname) ? "Local copy" : "Updated twice weekly") : "Live"} · <b>${EVENTS.length} events</b> · last web check <b>${esc(w)}</b>`;
   } else if (loadState === "slow") { el.classList.add("stale"); t.textContent = "The live event list is taking longer than usual to load."; }
   else if (loadState === "unavailable") { el.classList.add("stale"); t.textContent = "Live event list unavailable in this view."; }
   else t.textContent = "Connecting to the live event list…";
