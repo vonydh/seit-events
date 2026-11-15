@@ -1,0 +1,2317 @@
+{
+ "meta": {
+  "lastChecked": "2026-11-15T17:00:00+08:00",
+  "method": "Web crawl of organiser sites, venue calendars and event listings",
+  "sources": 55
+ },
+ "events": [
+  {
+   "added": "2026-11-15",
+   "ai": true,
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateStatus": "confirmed",
+   "desc": "One of the world's top AI research conferences, held in Singapore for 2026; main programme 22–25 Jan.",
+   "end": "2026-01-27",
+   "fit": {
+    "bis": [
+     1,
+     "AI for business: 'Business Analytics', 'Business Intelligence'"
+    ],
+    "ee": [
+     2,
+     "AI & Automation specialisation: 'AI Fundamentals', 'AI Applications'"
+    ],
+    "iad": [
+     2,
+     "Building AI apps: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "AAAI-26: 40th AAAI Conference on Artificial Intelligence",
+   "org": "AAAI",
+   "reg": "closed",
+   "source": {
+    "label": "aaai.org",
+    "url": "https://aaai.org/conference/aaai/aaai-26/"
+   },
+   "start": "2026-01-20",
+   "type": "conference",
+   "url": "https://aaai.org/conference/aaai/aaai-26/",
+   "venue": "Singapore EXPO",
+   "id": "aaai26"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Visitor pass (check site)",
+   "dateNote": "Most listings give 9–10 Apr; a few give 8–9 Apr.",
+   "dateStatus": "reported",
+   "desc": "Large tech exhibition on AI, cloud, data centres, cybersecurity and start-ups.",
+   "end": "2026-04-10",
+   "fit": {
+    "bis": [
+     2,
+     "'Application Development' with AI for business"
+    ],
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     2,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     1,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "dcoi": [
+     2,
+     "Data centre power, cooling, fire protection and server/storage monitoring"
+    ],
+    "ee": [
+     1,
+     "AI & Automation: 'AI Applications', 'Autonomous System Applications'"
+    ],
+    "iad": [
+     3,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "isn": [
+     1,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": false,
+   "name": "GITEX AI Asia 2026",
+   "org": "KAOUN International",
+   "reg": "closed",
+   "source": {
+    "label": "Wikipedia: GITEX Asia",
+    "url": "https://en.wikipedia.org/wiki/GITEX_Asia"
+   },
+   "start": "2026-04-09",
+   "type": "exhibition",
+   "url": "https://gitexasia.com/",
+   "venue": "Marina Bay Sands Expo, Singapore",
+   "id": "gx26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free (registration)",
+   "dateStatus": "confirmed",
+   "desc": "Oracle's one-day tour stop on AI, cloud infrastructure and databases.",
+   "end": "2026-04-14",
+   "fit": {
+    "bis": [
+     3,
+     "'Database Essentials', 'Enterprise Systems Process' (Oracle DB and ERP)"
+    ],
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "dcoi": [
+     1,
+     "Network, server and storage monitoring"
+    ],
+    "iad": [
+     1,
+     "'Fundamentals of Data'"
+    ]
+   },
+   "free": false,
+   "name": "Oracle AI World Tour Singapore 2026",
+   "org": "Oracle",
+   "reg": "closed",
+   "source": {
+    "label": "go.oracle.com",
+    "url": "https://go.oracle.com/LP=151762"
+   },
+   "start": "2026-04-14",
+   "type": "conference",
+   "url": "https://go.oracle.com/LP=151762",
+   "vendor": true,
+   "venue": "Singapore",
+   "id": "orc26"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid; Business Hall pass is usually free",
+   "dateStatus": "confirmed",
+   "desc": "Hands-on security trainings, research briefings, a Summit Day and a Business Hall of security vendors.",
+   "end": "2026-04-24",
+   "fit": {
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "isn": [
+     1,
+     "'Infrastructure Security'"
+    ]
+   },
+   "free": false,
+   "name": "Black Hat Asia 2026",
+   "org": "Black Hat (Informa Tech)",
+   "reg": "closed",
+   "source": {
+    "label": "blackhat.com",
+    "url": "https://blackhat.com/asia-26/briefings.html"
+   },
+   "start": "2026-04-21",
+   "type": "conference",
+   "url": "https://www.blackhat.com/asia-26/",
+   "venue": "Marina Bay Sands Expo, Singapore",
+   "id": "bh26"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateNote": "Inaugural Singapore edition; dates from one news source.",
+   "dateStatus": "reported",
+   "desc": "The hacker conference's first Singapore edition, with talks, villages and contests.",
+   "end": "2026-04-30",
+   "fit": {
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     2,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "ee": [
+     1,
+     "Hardware hacking villages: 'Microcontroller Applications'"
+    ],
+    "ssi": [
+     1,
+     "'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "DEF CON Singapore 2026",
+   "org": "DEF CON",
+   "reg": "closed",
+   "source": {
+    "label": "NSB Cyber",
+    "url": "https://www.nsbcyber.com/signals/nsbcs120-hacker-summer-camp-goes-east"
+   },
+   "start": "2026-04-26",
+   "type": "conference",
+   "url": "https://defcon.org/",
+   "venue": "Marina Bay Sands, Singapore",
+   "id": "dc26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateStatus": "confirmed",
+   "desc": "Southeast Asia's main semiconductor manufacturing exhibition, with talent and careers programmes.",
+   "end": "2026-05-07",
+   "fit": {
+    "ee": [
+     2,
+     "Semiconductor topics; EE 'Microelectronics' option is at ITE Central, East offers AI & Automation"
+    ]
+   },
+   "free": false,
+   "name": "SEMICON Southeast Asia 2026",
+   "org": "SEMI",
+   "reg": "closed",
+   "source": {
+    "label": "www.mida.gov.my",
+    "url": "https://www.mida.gov.my/media-release/semicon-southeast-asia-2026-to-convene-leaders-in-malaysia-to-drive-next-phase-of-semiconductor-growth/"
+   },
+   "start": "2026-05-05",
+   "type": "exhibition",
+   "url": "https://www.semiconsea.org/",
+   "venue": "MITEC, Kuala Lumpur, Malaysia",
+   "id": "semsea26"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free",
+   "dateStatus": "confirmed",
+   "desc": "One-day cloud conference with technical sessions, an expo and certification lounges.",
+   "end": "2026-05-06",
+   "fit": {
+    "bis": [
+     1,
+     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
+    ],
+    "cmo": [
+     3,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     1,
+     "'Cloud Security', 'Container Security'"
+    ],
+    "dcoi": [
+     1,
+     "Network, server and storage monitoring"
+    ],
+    "iad": [
+     2,
+     "Serverless apps: 'Server-side Development'"
+    ],
+    "isn": [
+     2,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": true,
+   "name": "AWS Summit Singapore 2026",
+   "org": "Amazon Web Services",
+   "reg": "closed",
+   "regNote": "On-demand recordings available on the AWS site",
+   "source": {
+    "label": "aws.amazon.com",
+    "url": "https://aws.amazon.com/summits/singapore"
+   },
+   "start": "2026-05-06",
+   "type": "conference",
+   "url": "https://aws.amazon.com/events/summits/singapore/",
+   "vendor": true,
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "aws26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free (by registration)",
+   "dateStatus": "confirmed",
+   "desc": "Invite-style leaders' forum on Google Cloud AI and security.",
+   "end": "2026-05-13",
+   "fit": {
+    "cmo": [
+     2,
+     "Cloud security and cloud operations"
+    ],
+    "cns": [
+     1,
+     "'Cloud Security', 'Container Security'"
+    ],
+    "csf": [
+     1,
+     "Risk & compliance, security incident management"
+    ]
+   },
+   "free": false,
+   "name": "Google Cloud Leaders Connect Singapore 2026",
+   "org": "Google Cloud",
+   "reg": "closed",
+   "source": {
+    "label": "cloud.google.com",
+    "url": "https://cloud.google.com/events/lc-sg-26"
+   },
+   "start": "2026-05-13",
+   "type": "conference",
+   "url": "https://cloud.google.com/events/lc-sg-26",
+   "vendor": true,
+   "venue": "Raffles Hotel, Singapore",
+   "id": "gclc26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free (registration)",
+   "dateStatus": "confirmed",
+   "desc": "Salesforce's yearly Singapore event on CRM, AI agents and business apps.",
+   "end": "2026-05-14",
+   "fit": {
+    "bis": [
+     3,
+     "'Enterprise Systems Process' (CRM), 'Business Intelligence'"
+    ],
+    "cmo": [
+     1,
+     "SaaS cloud operations"
+    ],
+    "iad": [
+     2,
+     "'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "Agentforce World Tour Singapore 2026",
+   "org": "Salesforce",
+   "reg": "closed",
+   "source": {
+    "label": "salesforce.com",
+    "url": "https://www.salesforce.com/ap/events/world-tour/singapore26/faq/"
+   },
+   "start": "2026-05-14",
+   "type": "conference",
+   "url": "https://www.salesforce.com/ap/events/world-tour/singapore26/",
+   "vendor": true,
+   "venue": "Marina Bay Sands Convention Centre, Singapore",
+   "id": "sf26"
+  },
+  {
+   "added": "2026-11-15",
+   "ai": true,
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Expo free; conference paid",
+   "dateNote": "Listings differ: 20 May only, or 20–22 May",
+   "dateStatus": "reported",
+   "desc": "Enterprise AI conference and expo held inside Asia Tech x Singapore.",
+   "end": "2026-05-22",
+   "fit": {
+    "bis": [
+     2,
+     "AI for business: 'Business Analytics', 'Business Intelligence'"
+    ],
+    "cmo": [
+     1,
+     "Running AI workloads in the cloud: cloud service operation"
+    ],
+    "ee": [
+     1,
+     "AI & Automation specialisation: 'AI Fundamentals', 'AI Applications'"
+    ],
+    "iad": [
+     3,
+     "Building AI apps: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "The AI Summit Singapore 2026",
+   "org": "Informa Tech, part of Asia Tech x Singapore",
+   "reg": "closed",
+   "source": {
+    "label": "asiatechxsg.com",
+    "url": "https://asiatechxsg.com/aisummitsingapore/faq/"
+   },
+   "start": "2026-05-20",
+   "type": "conference",
+   "url": "https://asiatechxsg.com/aisummitsingapore/",
+   "venue": "Singapore EXPO (at ATxEnterprise)",
+   "id": "aisum26"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateStatus": "confirmed",
+   "desc": "Singapore's flagship tech event: ATxSummit (by invitation) plus the ATxEnterprise exhibition with CommunicAsia, BroadcastAsia, SatelliteAsia and The AI Summit.",
+   "end": "2026-05-22",
+   "fit": {
+    "bis": [
+     2,
+     "'Application Development' with AI for business"
+    ],
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     1,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "ee": [
+     2,
+     "CommunicAsia: 'Wireless Communications', 'IoT Fundamentals'"
+    ],
+    "iad": [
+     2,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "isn": [
+     2,
+     "'Enterprise Networking', 'Wireless Networking Fundamentals'"
+    ]
+   },
+   "free": false,
+   "name": "Asia Tech x Singapore 2026",
+   "org": "IMDA and Informa",
+   "reg": "closed",
+   "source": {
+    "label": "asiatechxsg.com",
+    "url": "https://asiatechxsg.com/event-highlights-2026/"
+   },
+   "start": "2026-05-20",
+   "type": "exhibition",
+   "url": "https://asiatechxsg.com/",
+   "venue": "Singapore EXPO (ATxEnterprise)",
+   "id": "atx26"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateStatus": "confirmed",
+   "desc": "Two-day AI conference with AI labs, start-ups and investors.",
+   "end": "2026-06-11",
+   "fit": {
+    "bis": [
+     2,
+     "'Application Development' with AI for business"
+    ],
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "ee": [
+     2,
+     "AI & Automation: 'AI Applications', 'Autonomous System Applications'"
+    ],
+    "iad": [
+     3,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "SuperAI Singapore 2026",
+   "org": "SuperAI",
+   "reg": "closed",
+   "source": {
+    "label": "TechNode Global",
+    "url": "https://technode.global/prnasia/superai-singapore-2026-sells-out-asias-largest-ai-event-brings-together-10000-global-innovators/"
+   },
+   "start": "2026-06-10",
+   "type": "conference",
+   "url": "https://www.superai.com/",
+   "venue": "Marina Bay Sands, Singapore",
+   "id": "sai26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "By application",
+   "dateStatus": "confirmed",
+   "desc": "OpenAI day for startup founders building with its models.",
+   "end": "2026-06-22",
+   "fit": {
+    "bis": [
+     1,
+     "'Application Development' with AI for business"
+    ],
+    "iad": [
+     2,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "OpenAI Founder Day Singapore 2026",
+   "org": "OpenAI",
+   "reg": "closed",
+   "regNote": "Aimed at startup founders",
+   "source": {
+    "label": "events.openai.com",
+    "url": "https://events.openai.com/founderdaysingapore26"
+   },
+   "start": "2026-06-22",
+   "type": "conference",
+   "url": "https://events.openai.com/founderdaysingapore26",
+   "vendor": true,
+   "venue": "Singapore",
+   "id": "oai26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free",
+   "dateStatus": "confirmed",
+   "desc": "Community developer day on the latest from Google I/O: Gemini, Gemma and AI agents.",
+   "end": "2026-06-27",
+   "fit": {
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "iad": [
+     3,
+     "Android, web and Gemini APIs: 'Mobile Apps Development', 'Front-end Web Development'"
+    ]
+   },
+   "free": true,
+   "name": "Google I/O Extended Singapore 2026",
+   "org": "GDG Singapore (Google Developer Groups)",
+   "reg": "closed",
+   "source": {
+    "label": "gdg.community.dev",
+    "url": "https://gdg.community.dev/events/details/google-gdg-singapore-presents-google-io-extended-singapore-2026/"
+   },
+   "start": "2026-06-27",
+   "type": "conference",
+   "url": "https://gdg.community.dev/events/details/google-gdg-singapore-presents-google-io-extended-singapore-2026/",
+   "vendor": true,
+   "venue": "Google Developer Space, Pasir Panjang Road, Singapore",
+   "id": "ioe26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free (registration)",
+   "dateStatus": "confirmed",
+   "desc": "One-day data cloud and AI event with keynotes, masterclasses and an expo.",
+   "end": "2026-08-26",
+   "fit": {
+    "bis": [
+     3,
+     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
+    ],
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "iad": [
+     1,
+     "'Fundamentals of Data'"
+    ]
+   },
+   "free": false,
+   "name": "Snowflake World Tour Singapore 2026",
+   "org": "Snowflake",
+   "reg": "closed",
+   "source": {
+    "label": "snowflake.com",
+    "url": "https://www.snowflake.com/en/world-tour/singapore/agenda/"
+   },
+   "start": "2026-08-26",
+   "type": "conference",
+   "url": "https://www.snowflake.com/en/world-tour/singapore/",
+   "vendor": true,
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "snow26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free (registration)",
+   "dateStatus": "confirmed",
+   "desc": "Launch of Google Cloud's Singapore Engineering Centre with keynote and a multi-agent hackathon workshop.",
+   "end": "2026-09-15",
+   "fit": {
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "iad": [
+     3,
+     "Hands-on AI agent building: 'Server-side Development'"
+    ]
+   },
+   "free": false,
+   "name": "Google Cloud Singapore Engineering Centre Launch & Hackathon",
+   "org": "Google Cloud",
+   "reg": "closed",
+   "source": {
+    "label": "cloud.google.com",
+    "url": "https://cloud.google.com/events/hackathon-sg-google"
+   },
+   "start": "2026-09-15",
+   "type": "competition",
+   "url": "https://cloud.google.com/events/hackathon-sg-google",
+   "vendor": true,
+   "venue": "70 Pasir Panjang Road, Singapore",
+   "id": "gsec26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free (application)",
+   "dateStatus": "confirmed",
+   "desc": "Data and AI platform event; Databricks also announced a plan to train 20,000 people in data and AI.",
+   "end": "2026-09-16",
+   "fit": {
+    "bis": [
+     3,
+     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
+    ],
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "iad": [
+     1,
+     "'Fundamentals of Data'"
+    ]
+   },
+   "free": false,
+   "name": "Databricks Data + AI World Tour Singapore 2026",
+   "org": "Databricks",
+   "reg": "closed",
+   "source": {
+    "label": "databricks.com",
+    "url": "https://www.databricks.com/it/dataaisummit/worldtour?region=apac"
+   },
+   "start": "2026-09-16",
+   "type": "conference",
+   "url": "https://www.databricks.com/dataaisummit/worldtour?region=apac",
+   "vendor": true,
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "dbx26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateStatus": "confirmed",
+   "desc": "Singapore's largest yearly gathering of the semiconductor industry, with a summit and exhibitor booths.",
+   "end": "2026-09-25",
+   "fit": {
+    "ee": [
+     2,
+     "Semiconductor topics; EE 'Microelectronics' option is at ITE Central, East offers AI & Automation"
+    ]
+   },
+   "free": false,
+   "name": "SSIA Summit & Semiconductor Dinner 2026",
+   "org": "Singapore Semiconductor Industry Association",
+   "reg": "closed",
+   "source": {
+    "label": "ssia.org.sg",
+    "url": "https://ssia.org.sg/ssia-summit-2026/"
+   },
+   "start": "2026-09-24",
+   "type": "conference",
+   "url": "https://ssia.org.sg/ssia-summit-2026/",
+   "venue": "Resorts World Sentosa, Singapore",
+   "id": "ssia26"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free trade visitor registration",
+   "dateStatus": "confirmed",
+   "desc": "Five co-located shows: Cloud & AI Infrastructure Asia, DevOps Live Asia, Big Data & AI World Asia, Cyber Security World Asia and Data Centre World Asia.",
+   "end": "2026-09-30",
+   "fit": {
+    "bis": [
+     2,
+     "Big Data & AI World: 'Business Analytics'"
+    ],
+    "cmo": [
+     3,
+     "Cloud & AI Infrastructure Asia, DevOps Live: cloud operations and DevOps"
+    ],
+    "cns": [
+     3,
+     "Cyber Security World Asia: 'Security Operations', 'IT Security'"
+    ],
+    "csf": [
+     2,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "dcoi": [
+     3,
+     "Data Centre World Asia: power, cooling and facility operations"
+    ],
+    "iad": [
+     2,
+     "DevOps Live: 'Software Development Practices'"
+    ],
+    "isn": [
+     2,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": true,
+   "name": "Tech Week Singapore 2026",
+   "org": "CloserStill Media",
+   "reg": "closed",
+   "source": {
+    "label": "Little Big Red Dot",
+    "url": "https://littlebigreddot.com/tech-week-singapore-2026-sands-expo-29-30-september/"
+   },
+   "start": "2026-09-29",
+   "type": "exhibition",
+   "url": "https://www.singaporetechnologyweek.com/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "tw26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free (registration)",
+   "dateStatus": "confirmed",
+   "desc": "Microsoft's free one-day AI tour stop with keynotes, Azure and Copilot sessions, and hands-on labs.",
+   "end": "2026-10-12",
+   "fit": {
+    "bis": [
+     2,
+     "Copilot and Power Platform for business: 'Application Development'"
+    ],
+    "cmo": [
+     3,
+     "Azure cloud operations"
+    ],
+    "cns": [
+     1,
+     "Microsoft security: 'IT Security'"
+    ],
+    "iad": [
+     2,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "isn": [
+     2,
+     "Windows Server and Azure: 'System Administration', 'Cloud System Administration'"
+    ]
+   },
+   "free": false,
+   "name": "Microsoft AI Tour Singapore 2026",
+   "org": "Microsoft",
+   "reg": "closed",
+   "source": {
+    "label": "aitour.microsoft.com",
+    "url": "https://aitour.microsoft.com/"
+   },
+   "start": "2026-10-12",
+   "type": "conference",
+   "url": "https://aitour.microsoft.com/",
+   "vendor": true,
+   "venue": "Singapore EXPO, Singapore",
+   "id": "msai26"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Mostly by invitation",
+   "dateStatus": "confirmed",
+   "desc": "Government-led week of cybersecurity conferences, with GovWare as its exhibition.",
+   "end": "2026-10-16",
+   "fit": {
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Risk & compliance, security incident management"
+    ],
+    "ssi": [
+     1,
+     "'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "Singapore International Cyber Week 2026",
+   "org": "Cyber Security Agency of Singapore",
+   "reg": "closed",
+   "source": {
+    "label": "sicw.gov.sg agenda",
+    "url": "https://www.sicw.gov.sg/agenda/agenda-calendar/"
+   },
+   "start": "2026-10-12",
+   "type": "conference",
+   "url": "https://www.sicw.gov.sg/",
+   "venue": "Sands Expo & Convention Centre and other venues",
+   "id": "sicw26"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Exhibition pass (check site)",
+   "dateStatus": "confirmed",
+   "desc": "Asia's cybersecurity conference and exhibition, the anchor event of SICW.",
+   "end": "2026-10-15",
+   "fit": {
+    "cmo": [
+     1,
+     "Cloud security and cloud operations"
+    ],
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "isn": [
+     2,
+     "'Infrastructure Security'"
+    ],
+    "ssi": [
+     2,
+     "OT and physical security: 'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "GovWare Conference & Exhibition 2026",
+   "org": "Sphere Exhibits",
+   "reg": "closed",
+   "source": {
+    "label": "sicw.gov.sg",
+    "url": "https://www.sicw.gov.sg/agenda/govware-conference-exhibition-2026/"
+   },
+   "start": "2026-10-13",
+   "type": "exhibition",
+   "url": "https://www.govware.sg/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "gw26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "By application",
+   "dateStatus": "confirmed",
+   "desc": "Anthropic's developer day on building with Claude, held as it opened its Singapore office.",
+   "end": "2026-10-14",
+   "fit": {
+    "bis": [
+     1,
+     "'Application Development' with AI for business"
+    ],
+    "iad": [
+     3,
+     "Building apps and agents with Claude: 'Server-side Development'"
+    ]
+   },
+   "free": false,
+   "name": "Anthropic Builder Summit Singapore 2026",
+   "org": "Anthropic",
+   "reg": "closed",
+   "regNote": "Applications closed; livestream was offered",
+   "source": {
+    "label": "anthropic.com",
+    "url": "https://www.anthropic.com/events/anthropic-builder-summit-singapore"
+   },
+   "start": "2026-10-14",
+   "type": "conference",
+   "url": "https://www.anthropic.com/events/anthropic-builder-summit-singapore",
+   "vendor": true,
+   "venue": "Singapore (venue not published)",
+   "id": "ant26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateNote": "Organiser says 20–21 Oct; another press release says 21–22 Oct",
+   "dateStatus": "reported",
+   "desc": "Industry 4.0 conference and showcase on automation, AI, robotics and smart manufacturing.",
+   "end": "2026-10-21",
+   "fit": {
+    "bis": [
+     1,
+     "Smart manufacturing systems: 'Enterprise Systems Process'"
+    ],
+    "cns": [
+     1,
+     "OT security: 'Infrastructure Security'"
+    ],
+    "ee": [
+     3,
+     "AI & Automation: 'AI Applications', 'Autonomous System Applications'"
+    ]
+   },
+   "free": false,
+   "name": "Industrial Transformation Asia-Pacific (ITAP) 2026",
+   "org": "Deutsche Messe (Hannover Messe) & Singapore Manufacturing Federation",
+   "reg": "closed",
+   "source": {
+    "label": "www.hannovermesse.de",
+    "url": "https://www.hannovermesse.de/en/news/news-articles/itap-to-return-in-october-2026-ahead-of-full-scale-2027-edition"
+   },
+   "start": "2026-10-20",
+   "type": "exhibition",
+   "url": "https://www.industrial-transformation.com/",
+   "venue": "Suntec Singapore Convention & Exhibition Centre",
+   "id": "itap26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free (registration)",
+   "dateStatus": "confirmed",
+   "desc": "Red Hat's open-source event on Linux (RHEL), OpenShift containers and automation.",
+   "end": "2026-10-22",
+   "fit": {
+    "cmo": [
+     3,
+     "OpenShift, containers and automation: infrastructure automation, DevOps"
+    ],
+    "cns": [
+     1,
+     "'Cloud Security', 'Container Security'"
+    ],
+    "dcoi": [
+     1,
+     "Network, server and storage monitoring"
+    ],
+    "iad": [
+     1,
+     "'Software Development Practices'"
+    ],
+    "isn": [
+     3,
+     "Linux and Ansible: 'System Administration', 'Administrative Scripting'"
+    ]
+   },
+   "free": false,
+   "name": "Red Hat Summit: Connect Singapore 2026",
+   "org": "Red Hat",
+   "reg": "closed",
+   "source": {
+    "label": "redhat.com",
+    "url": "https://www.redhat.com/en/summit/connect/apac/singapore-2026"
+   },
+   "start": "2026-10-22",
+   "type": "conference",
+   "url": "https://www.redhat.com/en/summit/connect/apac/singapore-2026",
+   "vendor": true,
+   "venue": "Marina Bay Sands Expo & Convention Centre, Singapore",
+   "id": "rh26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateStatus": "confirmed",
+   "desc": "Conference for the open-source Robot Operating System (ROS) community, with a hackathon on 23 Oct.",
+   "end": "2026-10-26",
+   "fit": {
+    "ee": [
+     3,
+     "'Principles of Autonomous Robotic System', 'Autonomous System Applications'"
+    ],
+    "iad": [
+     1,
+     "Programming for robots: 'Programming Essentials'"
+    ]
+   },
+   "free": false,
+   "name": "ROSCon Singapore 2026",
+   "org": "Open Robotics with National Robotics Programme",
+   "reg": "closed",
+   "source": {
+    "label": "roscon.ros.org",
+    "url": "https://roscon.ros.org/sg/2026/"
+   },
+   "start": "2026-10-26",
+   "type": "conference",
+   "url": "https://roscon.ros.org/sg/2026/",
+   "venue": "Lorong AI @ one-north, Singapore",
+   "id": "roscon26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateStatus": "confirmed",
+   "desc": "Embodied AI and robotics track at the SWITCH innovation festival, with the ROS-Industrial Asia Pacific Summit.",
+   "end": "2026-10-27",
+   "fit": {
+    "ee": [
+     3,
+     "'Principles of Autonomous Robotic System', 'Autonomous System Applications'"
+    ]
+   },
+   "free": false,
+   "name": "SWITCH Beyond 2026: Embodied AI & Robotics track",
+   "org": "A*STAR ARTC with ROS-Industrial Consortium Asia Pacific",
+   "reg": "closed",
+   "source": {
+    "label": "www.a-star.edu.sg",
+    "url": "https://www.a-star.edu.sg/artc/news-events/2026/switch-beyond-2026"
+   },
+   "start": "2026-10-27",
+   "type": "conference",
+   "url": "https://www.a-star.edu.sg/artc/news-events/2026/switch-beyond-2026",
+   "venue": "Marina Bay Sands Expo & Convention Centre, Singapore",
+   "id": "switch26"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free trade registration",
+   "dateStatus": "confirmed",
+   "desc": "Pro AV and systems integration show, co-located with The Security Event Asia and The Fire Safety Event Asia.",
+   "end": "2026-11-12",
+   "fit": {
+    "dcoi": [
+     1,
+     "Fire protection and building systems inspection (data centre facility modules)"
+    ],
+    "ee": [
+     2,
+     "AV and IoT integration: 'IoT Fundamentals', 'Computer Networking'"
+    ],
+    "isn": [
+     1,
+     "AV-over-IP and security networks"
+    ],
+    "ssi": [
+     3,
+     "The Security Event Asia: 'Video Surveillance System', 'Access Control System', 'Intrusion Detection System'"
+    ]
+   },
+   "free": false,
+   "name": "Pro Integration Future Asia 2026 + The Security Event Asia",
+   "org": "Nineteen Group",
+   "reg": "closed",
+   "source": {
+    "label": "www.systemsintegrationasia.com",
+    "url": "https://www.systemsintegrationasia.com/events/2026-11-10/"
+   },
+   "start": "2026-11-10",
+   "type": "exhibition",
+   "url": "https://www.prointegrationfuture.asia/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "pifa26"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Trade pass (check site)",
+   "dateStatus": "reported",
+   "desc": "Security systems, surveillance, access control, fire safety and smart buildings.",
+   "end": "2026-11-12",
+   "fit": {
+    "dcoi": [
+     2,
+     "Fire protection and building systems inspection (data centre facility modules)"
+    ],
+    "ee": [
+     1,
+     "Sensors and IoT for smart buildings: 'IoT Fundamentals'"
+    ],
+    "isn": [
+     1,
+     "IP networks for security devices"
+    ],
+    "ssi": [
+     3,
+     "'Video Surveillance System', 'Access Control System', 'Intrusion Detection System'"
+    ]
+   },
+   "free": false,
+   "name": "Safety & Security Asia 2026",
+   "org": "Nineteen Group",
+   "reg": "closed",
+   "source": {
+    "label": "Showsbee listing",
+    "url": "https://www.showsbee.com/fairs/35852-Safety-Security-Asia-2026.html"
+   },
+   "start": "2026-11-10",
+   "type": "exhibition",
+   "url": "",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "ssa26"
+  },
+  {
+   "added": "2026-11-15",
+   "ai": true,
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "By invitation",
+   "dateStatus": "reported",
+   "desc": "Analyst-led summit for IT leaders on AI and data strategy.",
+   "end": "2026-11-13",
+   "fit": {
+    "bis": [
+     2,
+     "AI for business: 'Business Analytics', 'Business Intelligence'"
+    ],
+    "cmo": [
+     1,
+     "Running AI workloads in the cloud: cloud service operation"
+    ],
+    "iad": [
+     1,
+     "'Fundamentals of Data'"
+    ]
+   },
+   "free": false,
+   "name": "IDC ASEAN AI & Data Summit 2026",
+   "org": "IDC",
+   "reg": "closed",
+   "source": {
+    "label": "infosec-conferences.com",
+    "url": "https://infosec-conferences.com/event/20261113-idc-asean-ai-and-data-summit-singapore-2026/"
+   },
+   "start": "2026-11-13",
+   "type": "conference",
+   "url": "https://event.idc.com/",
+   "venue": "Singapore",
+   "id": "idcai26"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateStatus": "confirmed",
+   "desc": "Global fintech festival on payments, AI, digital assets and cyber resilience in finance.",
+   "end": "2026-11-20",
+   "fit": {
+    "bis": [
+     2,
+     "Fintech business systems: 'Enterprise Systems Process', 'Business Analytics'"
+    ],
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     2,
+     "Cyber resilience in finance: 'IT Security'"
+    ],
+    "csf": [
+     1,
+     "Risk & compliance, security incident management"
+    ],
+    "iad": [
+     2,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "Singapore FinTech Festival 2026",
+   "org": "Monetary Authority of Singapore and GFTN",
+   "reg": "open",
+   "regNote": "Passes on sale now; the festival starts 18 Nov.",
+   "source": {
+    "label": "Cointelegraph press release, 10 Nov 2026",
+    "url": "https://cointelegraph.com/press-releases/1-week-to-go-for-sff-2026-five-forces-rewiring-global-finance-take-centre-stage-in-singapore-1820-november"
+   },
+   "start": "2026-11-18",
+   "type": "conference",
+   "url": "https://www.fintechfestival.sg/",
+   "venue": "Singapore EXPO, Halls 1–6",
+   "id": "sff26"
+  },
+  {
+   "added": "2026-11-15",
+   "ai": true,
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateStatus": "reported",
+   "desc": "One-day conference for teams building production AI systems: agents, LLM apps, evaluation and MLOps.",
+   "end": "2026-12-03",
+   "fit": {
+    "bis": [
+     1,
+     "AI for business: 'Business Analytics', 'Business Intelligence'"
+    ],
+    "cmo": [
+     2,
+     "Deploying and operating AI systems: DevOps, infrastructure automation"
+    ],
+    "iad": [
+     3,
+     "Building AI apps: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "AI Engineering Summit Singapore 2026",
+   "org": "AI Engineering Summit",
+   "reg": "tbc",
+   "source": {
+    "label": "allai.events",
+    "url": "https://allai.events/event/ai-engineering-summit-singapore-2026"
+   },
+   "start": "2026-12-03",
+   "type": "conference",
+   "url": "https://www.createwith.com/event/singapore-ai-engineering-summit-singapore-2026-dec-2026",
+   "venue": "Four Points by Sheraton Singapore, Riverview",
+   "id": "aies26"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid; Business Hall pass is usually free",
+   "dateNote": "Business Hall 2–3 Mar; AI Security Summit 1 Mar. Black Hat's events page still shows TBA.",
+   "dateStatus": "confirmed",
+   "desc": "Hands-on security trainings, research briefings, an AI Security Summit and a Business Hall.",
+   "end": "2027-03-03",
+   "fit": {
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "isn": [
+     1,
+     "'Infrastructure Security'"
+    ]
+   },
+   "free": false,
+   "name": "Black Hat Asia 2027",
+   "org": "Black Hat (Informa Tech)",
+   "reg": "tbc",
+   "regNote": "Check blackhat.com/asia for registration.",
+   "source": {
+    "label": "blackhat.com/asia",
+    "url": "https://blackhat.com/asia/"
+   },
+   "start": "2027-02-28",
+   "type": "conference",
+   "url": "https://www.blackhat.com/asia/",
+   "venue": "Marina Bay Sands Expo, Singapore",
+   "id": "bh27"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free visitor registration (check site)",
+   "dateStatus": "confirmed",
+   "desc": "Three co-located expos on photonics, semiconductors and embedded electronics; exhibitors include Texas Instruments and STMicroelectronics.",
+   "end": "2027-03-05",
+   "fit": {
+    "ee": [
+     3,
+     "Embedded electronics: 'Microcontroller Applications', 'Sensors & Actuators', 'Digital Applications'"
+    ],
+    "ssi": [
+     1,
+     "Sensors and imaging for security devices"
+    ]
+   },
+   "free": false,
+   "name": "Asia Photonics Expo + Asia Semiconductor Expo + Asia Embedded & Electronics Expo 2027",
+   "org": "Asia Photonics Expo (APE)",
+   "reg": "tbc",
+   "source": {
+    "label": "www.gophotonics.com",
+    "url": "https://www.gophotonics.com/events/details/1176-asia-photonics-expo-ape-2027"
+   },
+   "start": "2027-03-03",
+   "type": "exhibition",
+   "url": "https://www.asiaphotonicsexpo.com/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "ape27"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free to enter",
+   "dateStatus": "confirmed",
+   "desc": "National robotics showcase; hosts the finals of the Embodied AI Challenge for manufacturing (S$88,000 prize pool, open to student teams).",
+   "end": "2027-03-20",
+   "fit": {
+    "ee": [
+     3,
+     "'Principles of Autonomous Robotic System', 'Autonomous System Applications'"
+    ],
+    "iad": [
+     1,
+     "Programming for robots: 'Programming Essentials'"
+    ]
+   },
+   "free": false,
+   "name": "RoboSG! 2027 + Singapore Embodied AI Challenge Finals",
+   "org": "National Robotics Programme, A*STAR, NTU and Micron",
+   "reg": "interest",
+   "source": {
+    "label": "www.a-star.edu.sg",
+    "url": "https://www.a-star.edu.sg/news/press-releases/singapore-launches-first-national-embodied-ai-challenge-to-accelerate-real-world-robotics-deployment-in-manufacturing"
+   },
+   "start": "2027-03-20",
+   "type": "competition",
+   "url": "https://www.a-star.edu.sg/news/press-releases/singapore-launches-first-national-embodied-ai-challenge-to-accelerate-real-world-robotics-deployment-in-manufacturing",
+   "venue": "Singapore (venue to be announced)",
+   "id": "robosg27"
+  },
+  {
+   "aud": [
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateStatus": "reported",
+   "desc": "National capture-the-flag competition focused on digital forensics and incident response, open to university, polytechnic, JC and ITE students.",
+   "end": "2027-04-10",
+   "fit": {
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing'"
+    ],
+    "csf": [
+     3,
+     "Digital forensics and incident response CTF: cyber forensics, security incident management"
+    ],
+    "isn": [
+     1,
+     "'Infrastructure Security'"
+    ]
+   },
+   "free": false,
+   "name": "Spark National CTF 2027",
+   "org": "SANS Institute",
+   "reg": "interest",
+   "regNote": "Interest list open. Confirm ITE eligibility with SANS.",
+   "source": {
+    "label": "sans.org",
+    "url": "https://www.sans.org/mlp/spark-ctf-register-interest"
+   },
+   "start": "2027-04-10",
+   "type": "competition",
+   "url": "https://www.sans.org/mlp/spark-ctf-register-interest",
+   "venue": "To be announced",
+   "id": "spark27"
+  },
+  {
+   "added": "2026-11-15",
+   "ai": true,
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateStatus": "confirmed",
+   "desc": "Two-day generative and agentic AI summit with keynotes, an exhibition, a start-up arena and AI awards.",
+   "end": "2027-04-16",
+   "fit": {
+    "bis": [
+     2,
+     "AI for business: 'Business Analytics', 'Business Intelligence'"
+    ],
+    "cmo": [
+     1,
+     "Running AI workloads in the cloud: cloud service operation"
+    ],
+    "ee": [
+     1,
+     "AI & Automation specialisation: 'AI Fundamentals', 'AI Applications'"
+    ],
+    "iad": [
+     3,
+     "Building AI apps: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "GENAIX 2027: Global Generative & Agentic AI Summit",
+   "org": "GENAIX",
+   "reg": "tbc",
+   "source": {
+    "label": "genaixworld.com",
+    "url": "https://genaixworld.com/"
+   },
+   "start": "2027-04-15",
+   "type": "conference",
+   "url": "https://genaixworld.com/",
+   "venue": "Singapore EXPO",
+   "id": "genaix27"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Visitor pass (check site)",
+   "dateNote": "Listing sites give 29–30 Apr; not yet on the organiser's site.",
+   "dateStatus": "reported",
+   "desc": "Large tech exhibition on AI, cloud, data centres, cybersecurity and start-ups.",
+   "end": "2027-04-30",
+   "fit": {
+    "bis": [
+     2,
+     "'Application Development' with AI for business"
+    ],
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     2,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     1,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "dcoi": [
+     2,
+     "Data centre power, cooling, fire protection and server/storage monitoring"
+    ],
+    "ee": [
+     1,
+     "AI & Automation: 'AI Applications', 'Autonomous System Applications'"
+    ],
+    "iad": [
+     3,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "isn": [
+     1,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": false,
+   "name": "GITEX AI Asia 2027",
+   "org": "KAOUN International",
+   "reg": "tbc",
+   "source": {
+    "label": "Showsbee listing",
+    "url": "https://www.showsbee.com/fairs/72536-GITEX-ASIA-2027.html"
+   },
+   "start": "2027-04-29",
+   "type": "exhibition",
+   "url": "https://gitexasia.com/",
+   "venue": "Marina Bay Sands Expo, Singapore",
+   "id": "gx27"
+  },
+  {
+   "added": "2026-11-15",
+   "ai": true,
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Expo free; conference paid",
+   "dateNote": "Runs with ATxSG, expected 26–28 May 2027",
+   "dateStatus": "estimated",
+   "desc": "Enterprise AI conference and expo inside Asia Tech x Singapore.",
+   "end": "2027-05-01",
+   "fit": {
+    "bis": [
+     2,
+     "AI for business: 'Business Analytics', 'Business Intelligence'"
+    ],
+    "cmo": [
+     1,
+     "Running AI workloads in the cloud: cloud service operation"
+    ],
+    "ee": [
+     1,
+     "AI & Automation specialisation: 'AI Fundamentals', 'AI Applications'"
+    ],
+    "iad": [
+     3,
+     "Building AI apps: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "The AI Summit Singapore 2027",
+   "org": "Informa Tech, part of Asia Tech x Singapore",
+   "reg": "tbc",
+   "source": {
+    "label": "www.showsbee.com",
+    "url": "https://www.showsbee.com/fairs/102283-The-AI-Summit-Singapore-2027.html"
+   },
+   "start": "2027-05-01",
+   "tba": true,
+   "type": "conference",
+   "url": "https://asiatechxsg.com/aisummitsingapore/",
+   "venue": "Singapore EXPO (at ATxEnterprise)",
+   "id": "aisum27"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free",
+   "dateNote": "AWS has not announced 2027 dates. The 2026 summit was on 6 May.",
+   "dateStatus": "estimated",
+   "desc": "One-day cloud conference with technical sessions, an expo and certification lounges.",
+   "end": "2027-05-01",
+   "fit": {
+    "bis": [
+     1,
+     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
+    ],
+    "cmo": [
+     3,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     1,
+     "'Cloud Security', 'Container Security'"
+    ],
+    "dcoi": [
+     1,
+     "Network, server and storage monitoring"
+    ],
+    "iad": [
+     2,
+     "Serverless apps: 'Server-side Development'"
+    ],
+    "isn": [
+     2,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": true,
+   "name": "AWS Summit Singapore 2027",
+   "org": "Amazon Web Services",
+   "reg": "tbc",
+   "source": {
+    "label": "OpenCurious: AWS Summits 2027",
+    "url": "https://www.opencurious.com/tech-events/aws-summits-2027"
+   },
+   "start": "2027-05-01",
+   "tba": true,
+   "type": "conference",
+   "url": "https://aws.amazon.com/events/summits/singapore/",
+   "venue": "Singapore (venue to be announced)",
+   "id": "aws27"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateStatus": "confirmed",
+   "desc": "Supply chain and intralogistics show with autonomous mobile robots, picking robots and vision systems.",
+   "end": "2027-05-06",
+   "fit": {
+    "bis": [
+     1,
+     "Warehouse systems: 'Enterprise Systems Process'"
+    ],
+    "ee": [
+     2,
+     "AMRs and automation: 'Autonomous System Applications', 'Sensors & Actuators'"
+    ]
+   },
+   "free": false,
+   "name": "CeMAT Southeast Asia 2027",
+   "org": "Deutsche Messe",
+   "reg": "tbc",
+   "source": {
+    "label": "cematseasia.com",
+    "url": "https://cematseasia.com/"
+   },
+   "start": "2027-05-04",
+   "type": "exhibition",
+   "url": "https://cematseasia.com/",
+   "venue": "Singapore EXPO",
+   "id": "cemat27"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Visitor registration (check site)",
+   "dateNote": "Held in Kuala Lumpur, so a visit would be an overseas trip.",
+   "dateStatus": "confirmed",
+   "desc": "Semiconductor manufacturing and supply-chain exhibition with workforce and careers programmes.",
+   "end": "2027-05-27",
+   "fit": {
+    "ee": [
+     2,
+     "Semiconductor topics; EE 'Microelectronics' option is at ITE Central, East offers AI & Automation"
+    ]
+   },
+   "free": false,
+   "name": "SEMICON Southeast Asia 2027",
+   "org": "SEMI",
+   "reg": "tbc",
+   "regNote": "Exhibitor booking is open; visitor registration not yet.",
+   "source": {
+    "label": "semiconsea.org",
+    "url": "https://semiconsea.org/about/Event-Overview"
+   },
+   "start": "2027-05-25",
+   "type": "exhibition",
+   "url": "https://www.semiconsea.org/",
+   "venue": "MITEC, Kuala Lumpur, Malaysia",
+   "id": "semi27"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateNote": "ATxSummit 26–27 May at Capella (by invitation); ATxEnterprise 26–28 May at Singapore EXPO Halls 3–5.",
+   "dateStatus": "confirmed",
+   "desc": "Singapore's flagship tech event on AI, connectivity and digital trust.",
+   "end": "2027-05-28",
+   "fit": {
+    "bis": [
+     2,
+     "'Application Development' with AI for business"
+    ],
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     1,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "ee": [
+     2,
+     "CommunicAsia: 'Wireless Communications', 'IoT Fundamentals'"
+    ],
+    "iad": [
+     2,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "isn": [
+     2,
+     "'Enterprise Networking', 'Wireless Networking Fundamentals'"
+    ]
+   },
+   "free": false,
+   "name": "Asia Tech x Singapore 2027",
+   "org": "IMDA and Informa",
+   "reg": "tbc",
+   "source": {
+    "label": "asiatechxsg.com FAQ",
+    "url": "https://asiatechxsg.com/faqs/"
+   },
+   "start": "2027-05-26",
+   "type": "exhibition",
+   "url": "https://asiatechxsg.com/",
+   "venue": "Singapore EXPO, Halls 3–5",
+   "id": "atx27"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Usually free",
+   "dateNote": "Held late June in 2026",
+   "dateStatus": "estimated",
+   "desc": "Community developer day after Google I/O; usually free and student-friendly.",
+   "end": "2027-06-01",
+   "fit": {
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "iad": [
+     3,
+     "Android, web and Gemini APIs: 'Mobile Apps Development', 'Front-end Web Development'"
+    ]
+   },
+   "free": false,
+   "name": "Google I/O Extended Singapore 2027",
+   "org": "GDG Singapore (Google Developer Groups)",
+   "reg": "tbc",
+   "source": {
+    "label": "gdg.community.dev",
+    "url": "https://gdg.community.dev/events/details/google-gdg-singapore-presents-google-io-extended-singapore-2026/"
+   },
+   "start": "2027-06-01",
+   "tba": true,
+   "type": "conference",
+   "url": "",
+   "vendor": true,
+   "venue": "Singapore",
+   "id": "ioe27"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Usually free",
+   "dateNote": "Held 26 Aug in 2026",
+   "dateStatus": "estimated",
+   "desc": "Yearly data cloud and AI event.",
+   "end": "2027-08-01",
+   "fit": {
+    "bis": [
+     3,
+     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
+    ],
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "iad": [
+     1,
+     "'Fundamentals of Data'"
+    ]
+   },
+   "free": false,
+   "name": "Snowflake World Tour Singapore 2027",
+   "org": "Snowflake",
+   "reg": "tbc",
+   "source": {
+    "label": "snowflake.com",
+    "url": "https://www.snowflake.com/en/world-tour/singapore/"
+   },
+   "start": "2027-08-01",
+   "tba": true,
+   "type": "conference",
+   "url": "",
+   "vendor": true,
+   "venue": "Singapore",
+   "id": "snow27"
+  },
+  {
+   "added": "2026-11-15",
+   "ai": true,
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateNote": "Organiser says 2027 date is indicative",
+   "dateStatus": "reported",
+   "desc": "Summit on conversational AI, chatbots and AI for customer experience.",
+   "end": "2027-08-20",
+   "fit": {
+    "bis": [
+     2,
+     "AI in customer service: 'Enterprise Systems Process'"
+    ],
+    "iad": [
+     2,
+     "Chatbots and AI front ends: 'User Experience Development', 'Server-side Development'"
+    ]
+   },
+   "free": false,
+   "name": "Conversational Tech Summit Asia 2027",
+   "org": "Conversational Tech Summit Asia",
+   "reg": "tbc",
+   "source": {
+    "label": "conversationaltechsummitasia.com",
+    "url": "https://conversationaltechsummitasia.com/"
+   },
+   "start": "2027-08-20",
+   "type": "conference",
+   "url": "https://conversationaltechsummitasia.com/",
+   "venue": "Singapore",
+   "id": "cts27"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Usually free",
+   "dateNote": "Held 16 Sep in 2026",
+   "dateStatus": "estimated",
+   "desc": "Yearly data and AI platform event.",
+   "end": "2027-09-01",
+   "fit": {
+    "bis": [
+     3,
+     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
+    ],
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "iad": [
+     1,
+     "'Fundamentals of Data'"
+    ]
+   },
+   "free": false,
+   "name": "Databricks Data + AI World Tour Singapore 2027",
+   "org": "Databricks",
+   "reg": "tbc",
+   "source": {
+    "label": "databricks.com",
+    "url": "https://www.databricks.com/dataaisummit/worldtour?region=apac"
+   },
+   "start": "2027-09-01",
+   "tba": true,
+   "type": "conference",
+   "url": "",
+   "vendor": true,
+   "venue": "Singapore",
+   "id": "dbx27"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateNote": "Moved from June to September. A 36-hour hackathon runs 7–9 Sep.",
+   "dateStatus": "confirmed",
+   "desc": "Two-day AI conference with AI labs, start-ups and investors, plus a hackathon.",
+   "end": "2027-09-09",
+   "fit": {
+    "bis": [
+     2,
+     "'Application Development' with AI for business"
+    ],
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "ee": [
+     2,
+     "AI & Automation: 'AI Applications', 'Autonomous System Applications'"
+    ],
+    "iad": [
+     3,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "SuperAI Singapore 2027",
+   "org": "SuperAI",
+   "reg": "tbc",
+   "source": {
+    "label": "superai.com",
+    "url": "https://www.superai.com/"
+   },
+   "start": "2027-09-08",
+   "type": "conference",
+   "url": "https://www.superai.com/",
+   "venue": "Marina Bay Sands, Singapore",
+   "id": "sai27"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Exhibition pass (check site)",
+   "dateNote": "Held every October during SICW; 2027 dates not announced.",
+   "dateStatus": "estimated",
+   "desc": "Asia's cybersecurity conference and exhibition, the anchor event of SICW.",
+   "end": "2027-10-01",
+   "fit": {
+    "cmo": [
+     1,
+     "Cloud security and cloud operations"
+    ],
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "isn": [
+     2,
+     "'Infrastructure Security'"
+    ],
+    "ssi": [
+     2,
+     "OT and physical security: 'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "GovWare Conference & Exhibition 2027",
+   "org": "Sphere Exhibits",
+   "reg": "tbc",
+   "source": {
+    "label": "govware.sg",
+    "url": "https://www.govware.sg/"
+   },
+   "start": "2027-10-01",
+   "tba": true,
+   "type": "exhibition",
+   "url": "https://www.govware.sg/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "gw27"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Usually free",
+   "dateNote": "Held 12 Oct in 2026; was Feb in 2025",
+   "dateStatus": "estimated",
+   "desc": "Microsoft's yearly free AI tour stop.",
+   "end": "2027-10-01",
+   "fit": {
+    "bis": [
+     2,
+     "Copilot and Power Platform for business: 'Application Development'"
+    ],
+    "cmo": [
+     3,
+     "Azure cloud operations"
+    ],
+    "cns": [
+     1,
+     "Microsoft security: 'IT Security'"
+    ],
+    "iad": [
+     2,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "isn": [
+     2,
+     "Windows Server and Azure: 'System Administration', 'Cloud System Administration'"
+    ]
+   },
+   "free": false,
+   "name": "Microsoft AI Tour Singapore 2027",
+   "org": "Microsoft",
+   "reg": "tbc",
+   "source": {
+    "label": "aitour.microsoft.com",
+    "url": "https://aitour.microsoft.com/"
+   },
+   "start": "2027-10-01",
+   "tba": true,
+   "type": "conference",
+   "url": "",
+   "vendor": true,
+   "venue": "Singapore",
+   "id": "msai27"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Mostly by invitation",
+   "dateNote": "Held every October; 2027 dates not announced.",
+   "dateStatus": "estimated",
+   "desc": "Government-led week of cybersecurity conferences, with GovWare as its exhibition.",
+   "end": "2027-10-01",
+   "fit": {
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Risk & compliance, security incident management"
+    ],
+    "ssi": [
+     1,
+     "'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "Singapore International Cyber Week 2027",
+   "org": "Cyber Security Agency of Singapore",
+   "reg": "tbc",
+   "source": {
+    "label": "sicw.gov.sg",
+    "url": "https://www.sicw.gov.sg/about-singapore-international-cyber-week/"
+   },
+   "start": "2027-10-01",
+   "tba": true,
+   "type": "conference",
+   "url": "https://www.sicw.gov.sg/",
+   "venue": "Singapore",
+   "id": "sicw27"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free trade visitor registration",
+   "dateStatus": "confirmed",
+   "desc": "Co-located shows including Cloud & AI Infrastructure Asia, Data Centre World Asia, Cyber Security World Asia, DevOps Live and Big Data & AI World.",
+   "end": "2027-10-14",
+   "fit": {
+    "bis": [
+     2,
+     "Big Data & AI World: 'Business Analytics'"
+    ],
+    "cmo": [
+     3,
+     "Cloud & AI Infrastructure Asia, DevOps Live: cloud operations and DevOps"
+    ],
+    "cns": [
+     3,
+     "Cyber Security World Asia: 'Security Operations', 'IT Security'"
+    ],
+    "csf": [
+     2,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "dcoi": [
+     3,
+     "Data Centre World Asia: power, cooling and facility operations"
+    ],
+    "iad": [
+     2,
+     "DevOps Live: 'Software Development Practices'"
+    ],
+    "isn": [
+     2,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": true,
+   "name": "Tech Week Singapore 2027",
+   "org": "CloserStill Media",
+   "reg": "interest",
+   "regNote": "Register-interest form open for 2027.",
+   "source": {
+    "label": "singaporetechnologyweek.com",
+    "url": "https://www.singaporetechnologyweek.com/welcome/venue-travel-faqs"
+   },
+   "start": "2027-10-13",
+   "type": "exhibition",
+   "url": "https://www.singaporetechnologyweek.com/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "tw27"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free trade registration",
+   "dateNote": "Held 10–12 Nov in 2026",
+   "dateStatus": "estimated",
+   "desc": "Pro AV and systems integration show with The Security Event Asia.",
+   "end": "2027-11-01",
+   "fit": {
+    "dcoi": [
+     1,
+     "Fire protection and building systems inspection (data centre facility modules)"
+    ],
+    "ee": [
+     2,
+     "AV and IoT integration"
+    ],
+    "ssi": [
+     3,
+     "The Security Event Asia: 'Video Surveillance System', 'Access Control System', 'Intrusion Detection System'"
+    ]
+   },
+   "free": false,
+   "name": "Pro Integration Future Asia 2027 + The Security Event Asia",
+   "org": "Nineteen Group",
+   "reg": "tbc",
+   "source": {
+    "label": "www.showsbee.com",
+    "url": "https://www.showsbee.com/fairs/44726-Pro-Integration-Future-Asia-2027.html"
+   },
+   "start": "2027-11-01",
+   "tba": true,
+   "type": "exhibition",
+   "url": "",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "pifa27"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Paid",
+   "dateNote": "Held every November; 2027 dates not announced.",
+   "dateStatus": "estimated",
+   "desc": "Global fintech festival on payments, AI, digital assets and cyber resilience in finance.",
+   "end": "2027-11-01",
+   "fit": {
+    "bis": [
+     2,
+     "Fintech business systems: 'Enterprise Systems Process', 'Business Analytics'"
+    ],
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     2,
+     "Cyber resilience in finance: 'IT Security'"
+    ],
+    "csf": [
+     1,
+     "Risk & compliance, security incident management"
+    ],
+    "iad": [
+     2,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "Singapore FinTech Festival 2027",
+   "org": "Monetary Authority of Singapore and GFTN",
+   "reg": "tbc",
+   "source": {
+    "label": "fintechfestival.sg",
+    "url": "https://www.fintechfestival.sg/"
+   },
+   "start": "2027-11-01",
+   "tba": true,
+   "type": "conference",
+   "url": "https://www.fintechfestival.sg/",
+   "venue": "Singapore EXPO",
+   "id": "sff27"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Trade pass (check site)",
+   "dateNote": "2025 and 2026 editions were in November; 2027 dates not announced.",
+   "dateStatus": "estimated",
+   "desc": "Security systems, surveillance, access control, fire safety and smart buildings.",
+   "end": "2027-11-01",
+   "fit": {
+    "dcoi": [
+     2,
+     "Fire protection and building systems inspection (data centre facility modules)"
+    ],
+    "ee": [
+     1,
+     "Sensors and IoT for smart buildings: 'IoT Fundamentals'"
+    ],
+    "isn": [
+     1,
+     "IP networks for security devices"
+    ],
+    "ssi": [
+     3,
+     "'Video Surveillance System', 'Access Control System', 'Intrusion Detection System'"
+    ]
+   },
+   "free": false,
+   "name": "Safety & Security Asia 2027",
+   "org": "Nineteen Group",
+   "reg": "tbc",
+   "source": {
+    "label": "Clocate listing",
+    "url": "https://www.clocate.com/safety-and-security-asia/29825/"
+   },
+   "start": "2027-11-01",
+   "tba": true,
+   "type": "exhibition",
+   "url": "",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "ssa27"
+  }
+ ]
+}

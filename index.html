@@ -1,0 +1,712 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>body{margin:0}</style></head><body><title>SEIT Tech Events Calendar</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Layout: "Next up" hero, then a 12-month board of calendar-page cards; details open in a side sheet.
+   Course is a filter in the bar; colour encodes fit strength (strong / good / related) and big-tech vendor events. */
+:root {
+  --bg: #f4f6f9; --surface: #ffffff; --surface-2: #eef1f6; --fg: #142030; --muted: #5a6778; --line: #dbe1ea;
+  --accent: #0f5f8c; --accent-fg: #ffffff;
+  --ok: #17803f; --warn: #a15c00; --off: #6b7580;
+  --fit3: #17803f; --fit2: #0f5f8c; --fit1: #6b7580; --vendor: #7c3aed; --ai: #c026d3;
+  /* One colour per month, Jan → Dec, walking round the colour wheel */
+  --m0: #c0262d; --m1: #c2185b; --m2: #a21caf; --m3: #7e22ce; --m4: #4f46e5; --m5: #1d5fd1;
+  --m6: #0370a6; --m7: #0f766e; --m8: #15803d; --m9: #4d7c0f; --m10: #b45309; --m11: #c2410c; --mfg: #ffffff;
+  --shadow: 0 12px 32px rgba(16, 33, 48, .16);
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e141b; --surface: #16202b; --surface-2: #1d2935; --fg: #e7edf4; --muted: #9ba9b8; --line: #2a3847;
+    --accent: #5fb1e3; --accent-fg: #06202f; --ok: #5fd08f; --warn: #f0b75a; --off: #9aa5b0;
+    --fit3: #5fd08f; --fit2: #5fb1e3; --fit1: #9aa5b0; --vendor: #b69bff; --ai: #f0abfc;
+    --m0: #f87171; --m1: #f472b6; --m2: #e879f9; --m3: #c084fc; --m4: #a5b4fc; --m5: #7cb3ff;
+    --m6: #56c2f5; --m7: #4fd1c5; --m8: #6fd68f; --m9: #a3d65c; --m10: #f5b04a; --m11: #fb8a55; --mfg: #10161d;
+    --shadow: 0 12px 32px rgba(0,0,0,.5); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e141b; --surface: #16202b; --surface-2: #1d2935; --fg: #e7edf4; --muted: #9ba9b8; --line: #2a3847;
+  --accent: #5fb1e3; --accent-fg: #06202f; --ok: #5fd08f; --warn: #f0b75a; --off: #9aa5b0;
+  --fit3: #5fd08f; --fit2: #5fb1e3; --fit1: #9aa5b0; --vendor: #b69bff; --ai: #f0abfc;
+  --m0: #f87171; --m1: #f472b6; --m2: #e879f9; --m3: #c084fc; --m4: #a5b4fc; --m5: #7cb3ff;
+  --m6: #56c2f5; --m7: #4fd1c5; --m8: #6fd68f; --m9: #a3d65c; --m10: #f5b04a; --m11: #fb8a55; --mfg: #10161d;
+  --shadow: 0 12px 32px rgba(0,0,0,.5); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a { color: var(--accent); }
+svg.i { width: 1.1em; height: 1.1em; flex: none; vertical-align: -0.18em; }
+.tint { background: color-mix(in srgb, var(--k) 13%, var(--surface)); color: var(--k); }
+
+/* Header */
+header.top { background: var(--surface); border-bottom: 1px solid var(--line); }
+header.top .wrap { padding-block: 18px 14px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: flex-end; justify-content: space-between; }
+.eyebrow { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font-size: clamp(22px, 3vw, 30px); font-weight: 700; letter-spacing: -.01em; }
+.sync { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12.5px; }
+.sync .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--off); flex: none; }
+.sync.live .dot { background: var(--ok); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 20%, transparent); }
+.sync.stale .dot { background: var(--warn); }
+.sync b { color: var(--fg); font-weight: 600; }
+
+/* Sticky controls */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.bar .wrap { padding-block: 10px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 3px; }
+.seg button { border: 0; background: transparent; padding: 6px 14px; border-radius: 7px; cursor: pointer; font-weight: 600; color: var(--muted); display: inline-flex; gap: 6px; align-items: center; }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--fg); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+select, input[type="search"] { background: var(--surface); border: 1px solid var(--line); border-radius: 9px; padding: 7px 10px; min-width: 0; }
+#f-year { font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--accent); padding-block: 5px; }
+input[type="search"] { width: 190px; }
+.check { display: inline-flex; gap: 6px; align-items: center; font-weight: 500; cursor: pointer; }
+.check input { accent-color: var(--accent); width: 16px; height: 16px; }
+.grow { flex: 1; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+main { padding-block: 18px 44px; display: flex; flex-direction: column; gap: 18px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 14px; }
+.next { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: center; position: relative; overflow: hidden; }
+.next::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 6px; background: var(--k, var(--accent)); }
+.next .lbl { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.next .count { color: var(--k, var(--accent)); }
+.next h2 { font-size: clamp(19px, 2.4vw, 25px); line-height: 1.2; margin: 4px 0 6px; }
+.next .meta { color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13.5px; }
+.next .meta span { display: inline-flex; gap: 5px; align-items: center; }
+.next .acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+.stats { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; display: flex; gap: 12px; align-items: center; min-width: 0; }
+.stat .ic { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; flex: none; }
+.stat .ic svg { width: 20px; height: 20px; }
+.stat .n { font-family: var(--font-display); font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+.stat .l { color: var(--muted); font-size: 12.5px; }
+
+/* Date block */
+.dblock { width: 62px; border-radius: 12px; overflow: hidden; text-align: center; border: 1px solid var(--line); background: var(--surface); flex: none; }
+.dblock .m { background: var(--mk, var(--accent)); color: var(--mfg); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 0; }
+.dblock .dd { font-family: var(--font-display); font-weight: 700; font-size: 22px; line-height: 1.15; padding: 4px 2px 5px; font-variant-numeric: tabular-nums; }
+.dblock .dd.sm { font-size: 15px; padding: 9px 2px 9px; }
+.next .dblock { width: 80px; }
+.next .dblock .dd { font-size: 30px; }
+
+/* Course filter */
+#f-course { font-weight: 600; max-width: 100%; }
+#f-course.on { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); color: var(--accent); }
+.fbar { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 10px 14px; }
+.fbar strong { font-family: var(--font-display); }
+.best { color: var(--muted); font-size: 12.5px; line-height: 1.35; }
+.best b { color: var(--fg); font-weight: 600; }
+
+.badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
+.badge svg { width: 13px; height: 13px; }
+.b-open { background: color-mix(in srgb, var(--ok) 15%, var(--surface)); color: var(--ok); }
+.b-soon { background: color-mix(in srgb, var(--warn) 15%, var(--surface)); color: var(--warn); }
+.b-ended { background: var(--surface-2); color: var(--off); }
+.b-free { background: color-mix(in srgb, var(--ok) 15%, var(--surface)); color: var(--ok); letter-spacing: .04em; }
+.b-vendor { background: color-mix(in srgb, var(--vendor) 14%, var(--surface)); color: var(--vendor); }
+.b-est { border: 1px dashed var(--line); color: var(--muted); font-weight: 600; }
+.b-fit { background: color-mix(in srgb, var(--k) 15%, var(--surface)); color: var(--k); }
+
+/* Year board */
+.vt { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.vt h2 { font-size: 21px; }
+.sub { color: var(--muted); font-size: 13px; }
+.year { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.mcard { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.mcard { border-top: 5px solid var(--mk, var(--line)); background: color-mix(in srgb, var(--mk, var(--surface)) 5%, var(--surface)); }
+.mcard .mhead button { color: var(--mk, var(--fg)); }
+.mcard .mhead button:hover { text-decoration: underline; color: var(--mk, var(--accent)); }
+.mcard.now { box-shadow: 0 0 0 2px var(--mk, var(--accent)); }
+.mcard.now .nowtag { background: var(--mk, var(--accent)); color: var(--mfg); }
+.cal { border-top: 5px solid var(--mk, var(--line)) !important; }
+.vt h2.mtitle { color: var(--mk, var(--fg)); }
+.b-ai { background: color-mix(in srgb, var(--ai) 14%, var(--surface)); color: var(--ai); }
+.mhead { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.mhead button { border: 0; background: none; padding: 0; cursor: pointer; font-family: var(--font-display); font-weight: 700; font-size: 17px; }
+.mhead button:hover { color: var(--accent); }
+.mhead .c { color: var(--muted); font-size: 12px; }
+.nowtag { font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-fg); background: var(--accent); padding: 1px 7px; border-radius: 99px; }
+.empty { color: var(--muted); font-size: 13px; padding: 6px 2px; }
+.mcard.pastm { background: var(--surface-2); border-top-color: color-mix(in srgb, var(--mk) 45%, var(--surface-2)); }
+.mcard.pastm .ecard { opacity: .78; }
+.mcard.pastm .ecard:hover { opacity: 1; }
+.pasttag { font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--off); border: 1px solid var(--line); padding: 0 7px; border-radius: 99px; }
+
+.ecard { --k: var(--line); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; text-align: left; width: 100%; border: 1px solid var(--line); border-left: 4px solid var(--k); background: var(--surface); border-radius: 12px; padding: 9px 10px 9px 9px; cursor: pointer; color: var(--fg); }
+.ecard:hover { box-shadow: 0 4px 14px rgba(16,33,48,.10); border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); border-left-color: var(--k); }
+.ecard .dblock { width: 52px; }
+.dblock { border-color: color-mix(in srgb, var(--mk, var(--line)) 45%, var(--line)); }
+.ecard .dblock .dd { font-size: 18px; }
+.ecard .body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.ecard .type { display: inline-flex; gap: 5px; align-items: center; font-size: 11.5px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.ecard .t { font-weight: 700; font-size: 14.5px; line-height: 1.25; overflow-wrap: anywhere; }
+.ecard .row { display: flex; flex-wrap: wrap; gap: 5px 6px; align-items: center; }
+.ecard .venue { color: var(--muted); font-size: 12.5px; display: flex; gap: 4px; align-items: center; min-width: 0; }
+.ecard .venue span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Month */
+.cal { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.cal .dow, .cal .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.cal .dow div { padding: 8px; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; border-bottom: 1px solid var(--line); }
+.cell { min-height: 108px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 6px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.cell:nth-child(7n) { border-right: 0; }
+.cell.out { background: var(--surface-2); }
+.cell .num { font-size: 12px; font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 700; }
+.cell.today .num { background: var(--accent); color: var(--accent-fg); border-radius: 99px; width: 22px; height: 22px; display: grid; place-items: center; }
+.ev { --k: var(--accent); border: 0; border-left: 3px solid var(--k); text-align: left; font-size: 11.5px; font-weight: 600; padding: 2px 6px; border-radius: 4px; cursor: pointer; background: color-mix(in srgb, var(--k) 16%, var(--surface)); color: var(--fg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.navbtn { border: 1px solid var(--line); background: var(--surface); border-radius: 9px; width: 36px; height: 36px; cursor: pointer; display: grid; place-items: center; }
+.navbtn:disabled { opacity: .4; cursor: default; }
+.tba { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tba .ecard { width: auto; max-width: 100%; }
+.agenda { display: none; flex-direction: column; gap: 8px; }
+
+/* List */
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+table { border-collapse: collapse; width: 100%; min-width: 900px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; background: var(--surface-2); }
+tr:last-child td { border-bottom: 0; }
+tbody tr { cursor: pointer; }
+tbody tr:hover { background: var(--surface-2); }
+td.date { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
+.ename { font-weight: 700; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; border-radius: 10px; padding: 8px 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; white-space: nowrap; font-size: 14px; }
+.btn svg { width: 16px; height: 16px; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+.btn.big { padding: 11px 18px; font-size: 15px; }
+.btn[aria-disabled="true"] { opacity: .55; pointer-events: none; }
+.btn.sm { padding: 5px 10px; font-size: 13px; }
+
+/* Sheet */
+.scrim { position: fixed; inset: 0; background: rgba(8, 15, 22, .45); z-index: 20; }
+.sheet { --k: var(--accent); position: fixed; top: 0; right: 0; bottom: 0; width: min(500px, 100%); background: var(--surface); z-index: 21; box-shadow: var(--shadow); display: flex; flex-direction: column; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.sheet .hd { background: color-mix(in srgb, var(--k) 14%, var(--surface)); border-bottom: 3px solid var(--k); padding: calc(16px + env(safe-area-inset-top, 0px)) calc(20px + env(safe-area-inset-right, 0px)) 16px 20px; display: flex; gap: 14px; align-items: flex-start; }
+.sheet .hd h3 { font-size: 22px; line-height: 1.2; margin: 4px 0; }
+.sheet .hd .when { font-weight: 600; }
+.close { border: 1px solid var(--line); background: var(--surface); border-radius: 9px; width: 36px; height: 36px; cursor: pointer; display: grid; place-items: center; flex: none; }
+.sheet .bd { padding: 16px 20px 24px; padding-right: calc(20px + env(safe-area-inset-right, 0px)); overflow-y: auto; display: flex; flex-direction: column; gap: 18px; }
+.facts { display: flex; flex-direction: column; gap: 8px; }
+.fact { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; align-items: start; }
+.fact svg { width: 18px; height: 18px; color: var(--muted); margin-top: 2px; }
+.fact .v { overflow-wrap: anywhere; }
+.fact .v small { display: block; color: var(--muted); font-size: 12.5px; }
+.sec h4 { margin: 0 0 8px; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.fitrow.sel { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); border-radius: 8px; padding-inline: 8px; }
+.fitrow { display: grid; grid-template-columns: minmax(0, 1fr) 84px; gap: 2px 10px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.fitrow .nm { font-weight: 600; font-size: 13.5px; }
+.fitrow .nm small { color: var(--muted); font-weight: 600; font-size: 11px; margin-right: 4px; }
+.fitrow .why { grid-column: 1 / -1; color: var(--muted); font-size: 12.5px; }
+.fitrow.none .nm { color: var(--muted); font-weight: 500; }
+.bars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+.bars i { height: 8px; border-radius: 3px; background: var(--surface-2); }
+.bars i.on { background: var(--k); }
+.fitlbl { grid-column: 2; font-size: 11px; color: var(--muted); text-align: right; margin-top: -2px; }
+.regbox { border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.regbox .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.src { color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; display: flex; gap: 6px; align-items: flex-start; }
+
+.notice { padding: 40px 16px; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 14px; }
+.notice strong { display: block; color: var(--fg); font-family: var(--font-display); font-size: 17px; margin-bottom: 4px; }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; }
+footer .wrap { padding-block: 18px 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+footer h4 { margin: 0 0 4px; color: var(--fg); font-size: 13px; font-family: var(--font-display); }
+footer p { margin: 0; }
+
+@media (max-width: 980px) { .year { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+  .year { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .next { grid-template-columns: 1fr; }
+  .next .dblock { width: 70px; }
+  footer .wrap { grid-template-columns: 1fr; }
+  .grow { display: none; }
+  input[type="search"] { flex: 1 1 140px; width: auto; }
+  #f-course { flex: 1 1 100%; }
+  .cal { display: none; }
+  .agenda { display: flex; }
+}
+@media (prefers-reduced-motion: no-preference) { .sheet { animation: slide .2s ease-out; } @keyframes slide { from { transform: translateX(24px); opacity: .6; } } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">ITE College East · School of Electronics &amp; Info-Comm Technology</div>
+      <h1>Tech Events Calendar</h1>
+    </div>
+    <div class="sync" id="sync"><span class="dot"></span><span id="sync-text">Connecting to the live event list…</span></div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <label class="sr" for="f-year">Year</label>
+    <select id="f-year"></select>
+    <div class="seg" role="group" aria-label="View" id="views"></div>
+    <label class="sr" for="f-course">Course</label>
+    <select id="f-course"></select>
+    <div class="grow"></div>
+    <label class="sr" for="f-kind">Event kind</label>
+    <select id="f-kind">
+      <option value="">All events</option>
+      <option value="ai">AI events</option>
+      <option value="vendor">Tech &amp; electronics company events</option>
+      <option value="show">Trade shows &amp; conferences</option>
+    </select>
+    <label class="sr" for="f-aud">Audience</label>
+    <select id="f-aud">
+      <option value="">Staff &amp; students</option>
+      <option value="Staff">Staff</option>
+      <option value="Students">Students</option>
+    </select>
+    <label class="sr" for="f-q">Search events</label>
+    <input type="search" id="f-q" placeholder="Search events, venues…">
+    <label class="check"><input type="checkbox" id="f-free"> Free only</label>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="hero" id="hero"></section>
+  <section id="fbar" aria-live="polite"></section>
+  <section id="view"></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><h4>Where the data comes from</h4><p>A daily web check of organiser websites, venue calendars and event listings. Each event links to the page its dates came from and says whether the dates are confirmed, unconfirmed or estimated.</p></div>
+    <div><h4>How courses are matched</h4><p>Events are rated against the modules in ITE's official course outlines for College East's SEIT Higher Nitec and Work-Study Diploma courses, as a strong, good or related fit; each rating names the modules it links to. Pick a course in the Course box to see only the events that suit it, best fit first. Each event's details list every course that should attend.</p></div>
+    <div><h4>Before you register</h4><p>Always confirm dates, eligibility and fees on the organiser's site. Registration links go straight to the organiser.</p></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title" hidden></aside>
+
+<script>
+const ICONS = {
+  shield: '<path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/>',
+  cloud: '<path d="M7 18h10a4 4 0 0 0 .6-7.96A6 6 0 0 0 6.2 9.6 4.2 4.2 0 0 0 7 18z"/>',
+  code: '<path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/>',
+  chip: '<rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>',
+  mic: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/>',
+  hall: '<path d="M3 21V9l9-6 9 6v12"/><path d="M8 21v-7h8v7M3 21h18"/>',
+  trophy: '<path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M10 17h4v4h-4z"/>',
+  cap: '<path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v5"/>',
+  briefcase: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/>',
+  check: '<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  ended: '<circle cx="12" cy="12" r="9"/><path d="M8 12h8"/>',
+  pin: '<path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>',
+  tag: '<path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="7.5" r="1.5"/>',
+  org: '<rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M10 21v-4h4v4"/>',
+  users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/>',
+  link: '<path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/>',
+  calplus: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/>',
+  arrow: '<path d="M7 17L17 7M8 7h9v9"/>',
+  layers: '<path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/>',
+  grid: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+  cal: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  list: '<path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/>',
+  left: '<path d="M15 6l-6 6 6 6"/>',
+  right: '<path d="M9 6l6 6-6 6"/>',
+  x: '<path d="M6 6l12 12M18 6L6 18"/>',
+  spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>'
+};
+const ic = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n] || ""}</svg>`;
+
+const COURSES = {
+  ee:   { level: "Higher Nitec",       short: "Electronics Eng",              name: "Electronics Engineering" },
+  ssi:  { level: "Higher Nitec",       short: "Security System Integration",  name: "Security System Integration" },
+  bis:  { level: "Higher Nitec",       short: "Business Info Systems",        name: "Business Information Systems" },
+  cns:  { level: "Higher Nitec",       short: "Cyber & Network Security",     name: "Cyber & Network Security" },
+  isn:  { level: "Higher Nitec",       short: "IT Systems & Networks",        name: "IT Systems & Networks" },
+  iad:  { level: "Higher Nitec",       short: "IT Apps Development",          name: "IT Applications Development" },
+  dcoi: { level: "Work-Study Diploma", short: "Data Centre Ops & Infra",      name: "Data Centre Operations & Infrastructure" },
+  csf:  { level: "Work-Study Diploma", short: "Cybersecurity & Forensics",    name: "Cybersecurity & Forensics" },
+  cmo:  { level: "Work-Study Diploma", short: "Cloud Mgmt & Operations",      name: "Cloud Management & Operations" }
+};
+const VENDOR_RE = /amazon|\baws\b|google|microsoft|openai|anthropic|snowflake|databricks|oracle|salesforce|red hat|\bibm\b|nvidia|huawei|alibaba|cisco|infineon|stmicro|texas instruments|keysight|siemens|analog devices|microchip|rohde|\barm\b|micron|renesas|nxp|qualcomm|intel\b/i;
+const isVendor = e => !!e.vendor || VENDOR_RE.test(e.org || "");
+const AI_RE = /\bAI\b|artificial intelligence|machine learning|generative|agentic|\bLLM/;
+const isAI = e => !!e.ai || AI_RE.test(`${e.name} ${e.desc || ""}`);
+const mcol = m => `var(--m${m})`;
+const TYPES = {
+  conference:  { label: "Conference",  icon: "mic" },
+  exhibition:  { label: "Exhibition",  icon: "hall" },
+  competition: { label: "Competition", icon: "trophy" },
+  training:    { label: "Training",    icon: "cap" }
+};
+const lvShort = l => l === "Higher Nitec" ? "HN" : "WSDip";
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const MON = MONTHS.map(m => m.slice(0,3));
+const DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+
+const TODAY = (() => { const t = new Date(); return new Date(t.getFullYear(), t.getMonth(), t.getDate()); })();
+const d = s => { const [y,m,dd] = String(s).split("-").map(Number); return new Date(y, (m || 1) - 1, dd || 1); };
+const iso = x => `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,"0")}-${String(x.getDate()).padStart(2,"0")}`;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const safeUrl = u => /^https:\/\//i.test(u || "") ? u : "";
+const fitVar = n => `var(--fit${n})`;
+const fitOf = (e, k) => (e.fit && e.fit[k] && COURSES[k]) ? e.fit[k] : null;
+const fitList = e => Object.entries(e.fit || {}).filter(([k]) => COURSES[k]).sort((a,b) => b[1][0] - a[1][0]);
+
+let EVENTS = [], META = null, loadState = "loading";
+const state = { year: TODAY.getFullYear(), view: "year", month: TODAY.getMonth(), course: "", minFit: 1, kind: "", aud: "", free: false, q: "" };
+try {
+  const v = localStorage.getItem("seit-view"); if (["year","month","list"].includes(v)) state.view = v;
+  const c = localStorage.getItem("seit-course"); if (c && COURSES[c]) state.course = c;
+} catch (e) {}
+
+/* ---------- dates & status ---------- */
+const endDate = e => e.tba ? new Date(d(e.start).getFullYear(), d(e.start).getMonth() + 1, 0) : d(e.end || e.start);
+function fmtRange(e) {
+  if (e.tba) return `${MONTHS[d(e.start).getMonth()]} · dates TBA`;
+  const s = d(e.start), t = d(e.end || e.start);
+  if (+s === +t) return `${s.getDate()} ${MON[s.getMonth()]}`;
+  if (s.getMonth() === t.getMonth()) return `${s.getDate()}–${t.getDate()} ${MON[s.getMonth()]}`;
+  return `${s.getDate()} ${MON[s.getMonth()]} – ${t.getDate()} ${MON[t.getMonth()]}`;
+}
+const fmtDay = s => { const x = d(s); return `${x.getDate()} ${MON[x.getMonth()]} ${x.getFullYear()}`; };
+function fmtFull(e) {
+  if (e.tba) { const s = d(e.start); return `${MONTHS[s.getMonth()]} ${s.getFullYear()} (exact dates not announced)`; }
+  return e.end && e.end !== e.start ? `${fmtDay(e.start)} – ${fmtDay(e.end)}` : fmtDay(e.start);
+}
+function dblock(e) {
+  const s = d(e.start), t = d(e.end || e.start);
+  let dd, sm = false;
+  if (e.tba) { dd = "TBA"; sm = true; }
+  else if (+s === +t) dd = String(s.getDate());
+  else if (s.getMonth() === t.getMonth()) { dd = `${s.getDate()}–${t.getDate()}`; sm = String(dd).length > 4; }
+  else { dd = `${s.getDate()}–${t.getDate()}`; sm = true; }
+  const m = (s.getMonth() === t.getMonth() || e.tba) ? MON[s.getMonth()] : `${MON[s.getMonth()]}–${MON[t.getMonth()]}`;
+  return `<div class="dblock" aria-hidden="true" style="--mk:${mcol(s.getMonth())}"><div class="m">${m}</div><div class="dd${sm ? " sm" : ""}">${dd}</div></div>`;
+}
+function status(e) {
+  if (endDate(e) < TODAY) return { k: "ended", label: "Event ended", short: "Ended", icon: "ended", cls: "b-ended" };
+  if (e.reg === "open") return { k: "open", label: "Registration open", short: "Registration open", icon: "check", cls: "b-open" };
+  if (e.reg === "interest") return { k: "interest", label: "Register your interest", short: "Register interest", icon: "check", cls: "b-open" };
+  return { k: "tbc", label: "Registration not open yet", short: "Opens soon", icon: "clock", cls: "b-soon" };
+}
+const statusBadge = e => { const s = status(e); return `<span class="badge ${s.cls}">${ic(s.icon)}${s.short}</span>`; };
+function dateBadge(e) {
+  if (e.dateStatus === "estimated") return `<span class="badge b-est">Estimated date</span>`;
+  if (e.dateStatus === "reported") return `<span class="badge b-est">Unconfirmed date</span>`;
+  return "";
+}
+function daysTo(e) {
+  const s = d(e.start), t = endDate(e);
+  if (s <= TODAY && t >= TODAY) return "Happening now";
+  const n = Math.round((s - TODAY) / 864e5);
+  if (n === 1) return "Tomorrow";
+  if (n < 60) return `In ${n} days`;
+  const m = Math.round(n / 30.4);
+  return `In about ${m} months`;
+}
+const fitWord = n => n === 3 ? "Strong fit" : n === 2 ? "Good fit" : "Related";
+const fitBadge = n => `<span class="badge b-fit" style="--k:${fitVar(n)}">${"★".repeat(n)}${"☆".repeat(3 - n)} ${fitWord(n)}</span>`;
+const vendorBadge = e => (isAI(e) ? `<span class="badge b-ai">${ic("spark")}AI</span>` : "") + (isVendor(e) ? `<span class="badge b-vendor">${ic("org")}Tech company</span>` : "");
+function bestFor(e) {
+  const l = fitList(e), top = l.filter(([,f]) => f[0] === 3).length ? l.filter(([,f]) => f[0] === 3) : l.filter(([,f]) => f[0] === 2);
+  if (!top.length) return "";
+  return `<span class="best">Best for <b>${top.slice(0, 3).map(([k]) => esc(COURSES[k].short)).join(", ")}</b>${top.length > 3 ? ` +${top.length - 3}` : ""}</span>`;
+}
+
+function outlookUrl(e) {
+  if (e.tba) return "";
+  const end = new Date(d(e.end || e.start)); end.setDate(end.getDate() + 1);
+  const p = new URLSearchParams({
+    path: "/calendar/action/compose", rru: "addevent",
+    subject: e.name, startdt: e.start, enddt: iso(end), allday: "true",
+    location: e.venue || "", body: `${e.desc || ""}\n\nEvent site: ${safeUrl(e.url) || "see SEIT Tech Events Calendar"}`
+  });
+  return `https://outlook.office.com/calendar/0/deeplink/compose?${p.toString()}`;
+}
+
+/* ---------- filtering ---------- */
+function years() {
+  const ys = new Set([TODAY.getFullYear(), TODAY.getFullYear() + 1]);
+  EVENTS.forEach(e => ys.add(d(e.start).getFullYear()));
+  return [...ys].sort();
+}
+function matches(e) {
+  const q = state.q.trim().toLowerCase();
+  const f = state.course ? fitOf(e, state.course) : null;
+  return (!state.course || (f && f[0] >= state.minFit)) &&
+    (!state.kind || (state.kind === "ai" ? isAI(e) : (state.kind === "vendor") === isVendor(e))) &&
+    (!state.aud || (e.aud || []).includes(state.aud)) &&
+    (!state.free || e.free) &&
+    (!q || [e.name, e.venue, e.org, e.desc].join(" ").toLowerCase().includes(q));
+}
+function sortEv(a, b) {
+  if (state.course) { const fa = fitOf(a, state.course)[0], fb = fitOf(b, state.course)[0]; if (d(a.start).getMonth() === d(b.start).getMonth() && fa !== fb) return fb - fa; }
+  return d(a.start) - d(b.start) || (a.tba ? 1 : 0) - (b.tba ? 1 : 0);
+}
+const filtered = () => EVENTS.filter(e => d(e.start).getFullYear() === state.year && matches(e)).sort(sortEv);
+
+/* ---------- pieces ---------- */
+function cardColor(e) {
+  const f = state.course ? fitOf(e, state.course) : null;
+  return f ? fitVar(f[0]) : isVendor(e) ? "var(--vendor)" : "var(--line)";
+}
+function ecard(e) {
+  const t = TYPES[e.type];
+  const f = state.course ? fitOf(e, state.course) : null;
+  return `<button type="button" class="ecard" data-id="${esc(e.id)}" style="--k:${cardColor(e)}">
+    ${dblock(e)}
+    <span class="body">
+      ${t ? `<span class="type">${ic(t.icon)}${t.label}</span>` : ""}
+      <span class="t">${esc(e.name)}</span>
+      <span class="venue">${ic("pin")}<span>${esc(e.venue)}</span></span>
+      <span class="row">${f ? fitBadge(f[0]) : ""}${vendorBadge(e)}${statusBadge(e)}${e.free ? `<span class="badge b-free">FREE</span>` : ""}${dateBadge(e)}</span>
+    </span></button>`;
+}
+function regButton(e, size = "") {
+  const s = status(e), url = safeUrl(e.url);
+  if (s.k === "ended") return `<span class="btn ${size}" aria-disabled="true">${ic("ended")}Event ended</span>`;
+  if (!url) return `<span class="btn ${size}" aria-disabled="true">Link not available yet</span>`;
+  if (s.k === "open") return `<a class="btn primary ${size}" href="${esc(url)}" target="_blank" rel="noopener">Register now ${ic("arrow")}</a>`;
+  if (s.k === "interest") return `<a class="btn primary ${size}" href="${esc(url)}" target="_blank" rel="noopener">Register interest ${ic("arrow")}</a>`;
+  return `<a class="btn ${size}" href="${esc(url)}" target="_blank" rel="noopener">Visit event site ${ic("arrow")}</a>`;
+}
+function outlookButton(e, size = "") {
+  const u = outlookUrl(e);
+  if (!u || endDate(e) < TODAY) return "";
+  return `<a class="btn ${size}" href="${esc(u)}" target="_blank" rel="noopener">${ic("calplus")}Add to Outlook</a>`;
+}
+
+/* ---------- render ---------- */
+function renderControls() {
+  const ys = years();
+  if (!ys.includes(state.year)) state.year = ys[0];
+  document.getElementById("f-year").innerHTML = ys.map(y => `<option value="${y}"${y === state.year ? " selected" : ""}>${y}</option>`).join("");
+  document.getElementById("views").innerHTML = [["year","Year","grid"],["month","Month","cal"],["list","List","list"]]
+    .map(([v,l,i]) => `<button type="button" data-view="${v}" aria-pressed="${state.view === v}">${ic(i)}${l}</button>`).join("");
+  const cs = document.getElementById("f-course");
+  const grp = lvl => Object.entries(COURSES).filter(([,c]) => c.level === lvl).map(([k,c]) => `<option value="${k}"${state.course === k ? " selected" : ""}>${esc(c.name)}</option>`).join("");
+  cs.innerHTML = `<option value="">All courses</option><optgroup label="Higher Nitec">${grp("Higher Nitec")}</optgroup><optgroup label="Work-Study Diploma">${grp("Work-Study Diploma")}</optgroup>`;
+  cs.classList.toggle("on", !!state.course);
+}
+function renderFbar(list) {
+  const el = document.getElementById("fbar");
+  if (!state.course) { el.innerHTML = ""; return; }
+  const c = COURSES[state.course];
+  const n = k => list.filter(e => (fitOf(e, state.course) || [0])[0] === k).length;
+  el.innerHTML = `<div class="fbar"><span>${ic("cap")} Showing events for <strong>${esc(c.level)} in ${esc(c.name)}</strong>, best fit first</span>
+    <span class="sub">${n(3)} strong · ${n(2)} good · ${n(1)} related</span>
+    <span class="grow"></span>
+    <label class="sr" for="f-fit">Minimum fit</label>
+    <select id="f-fit">${[[1,"Show all fits"],[2,"Good fit and above"],[3,"Strong fit only"]].map(([v,l]) => `<option value="${v}"${state.minFit === v ? " selected" : ""}>${l}</option>`).join("")}</select>
+    <button type="button" class="btn sm" data-course="">${ic("x")}Clear course</button></div>`;
+}
+function renderSync() {
+  const el = document.getElementById("sync"), t = document.getElementById("sync-text");
+  el.className = "sync";
+  if (loadState === "live" || loadState === "local") {
+    el.classList.add("live");
+    const when = META && META.lastChecked ? new Date(META.lastChecked) : null;
+    const w = when && !isNaN(when) ? `${when.getDate()} ${MON[when.getMonth()]} ${when.getFullYear()}, ${when.toLocaleTimeString([], {hour: "numeric", minute: "2-digit"})}` : "not yet";
+    t.innerHTML = `${loadState === "local" ? (/^(localhost|127.0.0.1)$/.test(location.hostname) ? "Local copy" : "Updated daily") : "Live"} · <b>${EVENTS.length} events</b> · last web check <b>${esc(w)}</b>`;
+  } else if (loadState === "slow") { el.classList.add("stale"); t.textContent = "The live event list is taking longer than usual to load."; }
+  else if (loadState === "unavailable") { el.classList.add("stale"); t.textContent = "Live event list unavailable in this view."; }
+  else t.textContent = "Connecting to the live event list…";
+}
+function renderHero(list) {
+  const el = document.getElementById("hero");
+  if (!EVENTS.length) { el.innerHTML = ""; return; }
+  const upcoming = EVENTS.filter(e => matches(e) && !e.tba && endDate(e) >= TODAY).sort((a,b) => d(a.start) - d(b.start));
+  const next = upcoming[0];
+  const open = list.filter(e => ["open","interest"].includes(status(e).k)).length;
+  const stud = list.filter(e => (e.aud || []).includes("Students")).length;
+  const k = "var(--accent)";
+  const nf = next && state.course ? fitOf(next, state.course) : null;
+  const nextHtml = next ? `<div class="next" style="--k:${k}">
+      <div style="--k:${k}">${dblock(next)}</div>
+      <div style="min-width:0">
+        <div class="lbl">${ic("spark")} Next up${state.course ? ` for ${esc(COURSES[state.course].short)}` : ""} · <span class="count">${daysTo(next)}</span></div>
+        <h2>${esc(next.name)}</h2>
+        <div class="meta"><span>${ic("pin")}${esc(next.venue)}</span>${TYPES[next.type] ? `<span>${ic(TYPES[next.type].icon)}${TYPES[next.type].label}</span>` : ""}<span>${ic("tag")}${esc(next.cost)}</span></div>
+        <div class="row" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center">${nf ? fitBadge(nf[0]) : ""}${vendorBadge(next)}</div>
+        <div class="acts">${regButton(next, "big")}${outlookButton(next, "big")}<button type="button" class="btn big" data-id="${esc(next.id)}">${ic("info")}Details</button></div>
+      </div></div>`
+    : `<div class="next"><div></div><div><div class="lbl">Next up</div><h2>No upcoming events match these filters</h2></div></div>`;
+  el.innerHTML = nextHtml + `<div class="stats">
+    <div class="stat"><span class="ic tint" style="--k:var(--accent)">${ic("cal")}</span><div><div class="n">${list.length}</div><div class="l">events in ${state.year}</div></div></div>
+    <div class="stat"><span class="ic tint" style="--k:var(--ok)">${ic("check")}</span><div><div class="n">${open}</div><div class="l">open for registration</div></div></div>
+    <div class="stat"><span class="ic tint" style="--k:var(--vendor)">${ic("cap")}</span><div><div class="n">${stud}</div><div class="l">suitable for students</div></div></div>
+  </div>`;
+}
+function renderYear(list) {
+  const isThisYear = state.year === TODAY.getFullYear();
+  const byM = m => list.filter(e => d(e.start).getMonth() === m);
+  let h = `<div class="vt"><h2>${state.year} at a glance</h2><span class="sub">Click an event for details, registration and Add to Outlook. Past months are greyed out.</span></div>`;
+  h += `<div class="year">${[...Array(12).keys()].map(m => {
+    const evs = byM(m), now = isThisYear && m === TODAY.getMonth(), past = new Date(state.year, m + 1, 0) < TODAY;
+    return `<section class="mcard${now ? " now" : ""}${past ? " pastm" : ""}" style="--mk:${mcol(m)}"><div class="mhead"><button type="button" data-month="${m}">${MONTHS[m]}</button>
+      <span class="c">${now ? `<span class="nowtag">This month</span> ` : past ? `<span class="pasttag">Past</span> ` : ""}${evs.length ? `${evs.length} event${evs.length > 1 ? "s" : ""}` : ""}</span></div>
+      ${evs.length ? evs.map(ecard).join("") : `<div class="empty">No events listed</div>`}</section>`;
+  }).join("")}</div>`;
+  return h;
+}
+function renderMonth(list) {
+  const y = state.year, m = state.month, ys = years();
+  const first = new Date(y, m, 1), days = new Date(y, m + 1, 0).getDate();
+  const lead = (first.getDay() + 6) % 7, cells = Math.ceil((lead + days) / 7) * 7;
+  const dated = list.filter(e => !e.tba), tba = list.filter(e => e.tba && d(e.start).getMonth() === m);
+  const atStart = y === ys[0] && m === 0, atEnd = y === ys[ys.length - 1] && m === 11;
+  let h = `<div class="vt"><button type="button" class="navbtn" data-step="-1" aria-label="Previous month"${atStart ? " disabled" : ""}>${ic("left")}</button>
+    <h2 class="mtitle" style="--mk:${mcol(m)}">${MONTHS[m]} ${y}</h2><button type="button" class="navbtn" data-step="1" aria-label="Next month"${atEnd ? " disabled" : ""}>${ic("right")}</button></div>`;
+  if (tba.length) h += `<div class="tba"><span class="sub">Dates not announced yet:</span>${tba.map(ecard).join("")}</div>`;
+  h += `<div class="cal" style="--mk:${mcol(m)}"><div class="dow">${DOW.map(x => `<div>${x}</div>`).join("")}</div><div class="grid">`;
+  for (let i = 0; i < cells; i++) {
+    const date = new Date(y, m, i - lead + 1), out = date.getMonth() !== m;
+    const evs = out ? [] : dated.filter(e => d(e.start) <= date && d(e.end || e.start) >= date);
+    h += `<div class="cell${out ? " out" : ""}${+date === +TODAY ? " today" : ""}"><span class="num">${date.getDate()}</span>${
+      evs.map(e => `<button type="button" class="ev" data-id="${esc(e.id)}" style="--k:${state.course ? cardColor(e) : isVendor(e) ? "var(--vendor)" : "var(--accent)"}" title="${esc(e.name)}">${esc(e.name)}</button>`).join("")}</div>`;
+  }
+  h += `</div></div>`;
+  const monthEvs = dated.filter(e => d(e.start) <= new Date(y, m, days) && d(e.end || e.start) >= first);
+  h += `<div class="agenda">${monthEvs.length ? monthEvs.map(ecard).join("") : `<div class="notice">No dated events in ${MONTHS[m]}.</div>`}</div>`;
+  return h;
+}
+function renderList(list) {
+  if (!list.length) return `<div class="vt"><h2>All events in ${state.year}</h2></div>`;
+  return `<div class="vt"><h2>All events in ${state.year}</h2><span class="sub">${list.length} events</span></div>
+  <div class="tablewrap"><table><thead><tr><th>Dates</th><th>Event</th><th>${state.course ? "Fit for " + esc(COURSES[state.course].short) : "Best for"}</th><th>For</th><th>Cost</th><th>Registration</th></tr></thead><tbody>
+  ${list.map(e => { const f = state.course ? fitOf(e, state.course) : null; const t = TYPES[e.type]; return `<tr data-id="${esc(e.id)}">
+    <td class="date">${fmtRange(e)}<div style="margin-top:4px">${dateBadge(e)}</div></td>
+    <td><div class="ename">${esc(e.name)} ${vendorBadge(e)}</div><div class="sub" style="display:flex;gap:10px;flex-wrap:wrap">${t ? `<span>${ic(t.icon)} ${t.label}</span>` : ""}<span>${ic("pin")} ${esc(e.venue)}</span></div></td>
+    <td style="max-width:220px">${f ? fitBadge(f[0]) : bestFor(e)}</td>
+    <td>${(e.aud || []).map(a => `<span title="${a}">${ic(a === "Staff" ? "briefcase" : "cap")} ${a}</span>`).join("<br>")}</td>
+    <td>${e.free ? `<span class="badge b-free">FREE</span>` : esc(e.cost)}</td>
+    <td><div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">${statusBadge(e)}${status(e).k !== "ended" ? regButton(e, "sm") : ""}</div></td></tr>`; }).join("")}
+  </tbody></table></div>`;
+}
+function render() {
+  renderControls(); renderSync();
+  const list = filtered();
+  renderFbar(EVENTS.filter(e => d(e.start).getFullYear() === state.year && (() => { const m = state.minFit; state.minFit = 1; const r = matches(e); state.minFit = m; return r; })()));
+  renderHero(list);
+  let h;
+  if (loadState === "unavailable" && !EVENTS.length) h = `<div class="notice"><strong>Can't load the live event list here</strong>Check your connection and reload the page.</div>`;
+  else if (!EVENTS.length && !["live","local"].includes(loadState)) h = `<div class="notice"><strong>Loading events…</strong>The latest event list is on its way.</div>`;
+  else if (!EVENTS.length) h = `<div class="notice"><strong>No events yet</strong>Events appear here after the next web check.</div>`;
+  else {
+    h = state.view === "year" ? renderYear(list) : state.view === "month" ? renderMonth(list) : renderList(list);
+    if (!list.length) h += `<div class="notice" style="margin-top:12px">No events match these filters in ${state.year}. Try another course or year, or clear the search.</div>`;
+  }
+  document.getElementById("view").innerHTML = h;
+  if (openId) { const e = EVENTS.find(x => x.id === openId); if (e) fillSheet(e); else closeSheet(); }
+}
+
+/* ---------- sheet ---------- */
+let lastFocus = null, openId = null;
+function fillSheet(e) {
+  const s = status(e), src = e.source || {}, t = TYPES[e.type];
+  const k = isVendor(e) ? "var(--vendor)" : "var(--accent)";
+  const fl = fitList(e), rest = Object.keys(COURSES).filter(ck => !fitOf(e, ck));
+  const sheet = document.getElementById("sheet");
+  sheet.style.setProperty("--k", k);
+  sheet.innerHTML = `<div class="hd">${dblock(e)}<div style="flex:1;min-width:0">
+      <div style="display:flex;gap:6px;flex-wrap:wrap">${t ? `<span class="badge b-est" style="border-style:solid">${ic(t.icon)}${t.label}</span>` : ""}${vendorBadge(e)}${statusBadge(e)}${dateBadge(e)}</div>
+      <h3 id="sh-title">${esc(e.name)}</h3><div class="when">${fmtFull(e)}</div></div>
+    <button type="button" class="close" id="sh-close" aria-label="Close">${ic("x")}</button></div>
+    <div class="bd">
+      ${e.desc ? `<p style="margin:0">${esc(e.desc)}</p>` : ""}
+      <div class="facts">
+        <div class="fact">${ic("pin")}<div class="v">${esc(e.venue)}</div></div>
+        <div class="fact">${ic("org")}<div class="v">${esc(e.org)}</div></div>
+        <div class="fact">${ic("users")}<div class="v">${esc((e.aud || []).join(" and "))}</div></div>
+        <div class="fact">${ic("tag")}<div class="v">${e.free ? "Free entry" : esc(e.cost)}</div></div>
+        ${e.dateNote ? `<div class="fact">${ic("info")}<div class="v"><small>${esc(e.dateNote)}</small></div></div>` : ""}
+      </div>
+      <div class="regbox"><strong>${s.label}</strong>${e.regNote ? `<span class="sub">${esc(e.regNote)}</span>` : ""}
+        <div class="acts">${regButton(e, "big")}${outlookButton(e, "big")}</div></div>
+      <div class="sec"><h4>Which courses should attend</h4>
+        ${[...fl.map(([ck]) => ck), ...rest].map(ck => { const c = COURSES[ck], x = fitOf(e, ck); return `<div class="fitrow${x ? "" : " none"}${ck === state.course ? " sel" : ""}" style="--k:${x ? fitVar(x[0]) : "var(--line)"}">
+            <span class="nm"><small>${lvShort(c.level)}</small>${esc(c.name)}</span>
+            <span class="bars" aria-label="${x ? fitWord(x[0]) : "Not relevant"}">${[1,2,3].map(i => `<i class="${x && x[0] >= i ? "on" : ""}"></i>`).join("")}</span>
+            ${x ? `<span class="why">${fitWord(x[0])} · ${esc(x[1])}</span>` : ""}</div>`; }).join("")}
+      </div>
+      <div class="src">${ic("link")}<span>Dates from ${safeUrl(src.url) ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.label || "source")}</a>` : esc(src.label || "web listing")}${e.checked ? ` · checked ${fmtDay(e.checked)}` : ""}</span></div>
+    </div>`;
+}
+function openSheet(id) {
+  const e = EVENTS.find(x => x.id === id); if (!e) return;
+  openId = id; lastFocus = document.activeElement; fillSheet(e);
+  document.getElementById("sheet").hidden = false; document.getElementById("scrim").hidden = false;
+  document.getElementById("sh-close").focus();
+}
+function closeSheet() {
+  openId = null;
+  document.getElementById("sheet").hidden = true; document.getElementById("scrim").hidden = true;
+  if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click", ev => {
+  if (ev.target.closest("#sh-close")) { closeSheet(); return; }
+  if (ev.target.closest("a")) return;
+  const t = ev.target.closest("[data-view],[data-month],[data-step],[data-id],[data-course]");
+  if (!t) return;
+  if (t.dataset.view) { state.view = t.dataset.view; try { localStorage.setItem("seit-view", state.view); } catch (e) {} render(); }
+  else if (t.dataset.course !== undefined) { setCourse(t.dataset.course); }
+  else if (t.dataset.month) { state.month = +t.dataset.month; state.view = "month"; render(); }
+  else if (t.dataset.step) {
+    let m = state.month + +t.dataset.step, y = state.year;
+    if (m < 0) { m = 11; y--; } if (m > 11) { m = 0; y++; }
+    if (years().includes(y)) { state.month = m; state.year = y; render(); }
+  }
+  else if (t.dataset.id) openSheet(t.dataset.id);
+});
+document.getElementById("scrim").addEventListener("click", closeSheet);
+document.addEventListener("keydown", ev => { if (ev.key === "Escape" && !document.getElementById("sheet").hidden) closeSheet(); });
+document.getElementById("f-year").addEventListener("change", e => { state.year = +e.target.value; render(); });
+function setCourse(c) { state.course = c; state.minFit = 1; try { localStorage.setItem("seit-course", c); } catch (e) {} render(); }
+document.getElementById("f-course").addEventListener("change", e => setCourse(e.target.value));
+document.getElementById("f-kind").addEventListener("change", e => { state.kind = e.target.value; render(); });
+document.addEventListener("change", e => { if (e.target.id === "f-fit") { state.minFit = +e.target.value; render(); } });
+document.getElementById("f-aud").addEventListener("change", e => { state.aud = e.target.value; render(); });
+document.getElementById("f-free").addEventListener("change", e => { state.free = e.target.checked; render(); });
+document.getElementById("f-q").addEventListener("input", e => { state.q = e.target.value; render(); });
+
+render();
+
+(async () => {
+  let db = null;
+  try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch (e) { db = null; }
+  if (!db) {
+    // Standalone/local site: read the exported data file next to the page.
+    try {
+      const r = await fetch("events.json", { cache: "no-store" });
+      if (!r.ok) throw new Error(r.status);
+      const j = await r.json();
+      EVENTS = (j.events || []).filter(e => e && e.id && e.name && e.start);
+      META = j.meta || null; loadState = "local";
+    } catch (e) { loadState = "unavailable"; }
+    render(); return;
+  }
+  let got = false;
+  const timer = setTimeout(() => { if (!got) { loadState = "slow"; render(); } }, 10000);
+  db.collection("events").onSnapshot(snap => {
+    EVENTS = snap.docs.map(doc => ({ id: doc.id, ...doc.data() })).filter(e => e.name && e.start);
+    if (!snap.metadata.fromCache) { got = true; clearTimeout(timer); loadState = "live"; }
+    else if (loadState !== "live") loadState = "loading";
+    render();
+  }, () => { clearTimeout(timer); loadState = EVENTS.length ? "live" : "unavailable"; render(); });
+  db.doc("meta/sync").onSnapshot(snap => { META = snap.exists ? snap.data() : null; renderSync(); }, () => {});
+})();
+</script>
+</body></html>
