@@ -1,8 +1,8 @@
 {
  "meta": {
-  "lastChecked": "2026-11-15T15:35:16+08:00",
+  "lastChecked": "2026-11-16T09:00:00+08:00",
   "method": "Web crawl of organiser sites, venue calendars and event listings",
-  "sources": 62
+  "sources": 64
  },
  "events": [
   {
@@ -49,7 +49,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Visitor pass (check site)",
    "dateNote": "Most listings give 9–10 Apr; a few give 8–9 Apr.",
    "dateStatus": "reported",
@@ -187,7 +187,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Paid",
    "dateNote": "Inaugural Singapore edition; dates from one news source.",
    "dateStatus": "reported",
@@ -393,7 +393,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Expo free; conference paid",
    "dateNote": "Listings differ: 20 May only, or 20–22 May",
    "dateStatus": "reported",
@@ -966,7 +966,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Check site",
    "dateNote": "Organiser says 20–21 Oct; another press release says 21–22 Oct",
    "dateStatus": "reported",
@@ -1162,7 +1162,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Trade pass (check site)",
    "dateStatus": "reported",
    "desc": "Security systems, surveillance, access control, fire safety and smart buildings.",
@@ -1205,7 +1205,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "By invitation",
    "dateStatus": "reported",
    "desc": "Analyst-led summit for IT leaders on AI and data strategy.",
@@ -1242,7 +1242,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Paid",
    "dateStatus": "confirmed",
    "desc": "Global fintech festival on payments, AI, digital assets and cyber resilience in finance.",
@@ -1291,7 +1291,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Paid",
    "dateStatus": "reported",
    "desc": "One-day conference for teams building production AI systems: agents, LLM apps, evaluation and MLOps.",
@@ -1328,7 +1328,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Paid; Business Hall pass is usually free",
    "dateNote": "Business Hall 2–3 Mar; AI Security Summit 1 Mar. Black Hat's events page still shows TBA.",
    "dateStatus": "confirmed",
@@ -1401,7 +1401,7 @@
     "url": "https://www.nscc.sg/portfolio/item/new-dates-supercomputingasia-2027-1-4-march-2027/"
    },
    "ai": true,
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "added": "2026-11-15"
   },
   {
@@ -1410,7 +1410,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Free visitor registration (check site)",
    "dateStatus": "confirmed",
    "desc": "Three co-located expos on photonics, semiconductors and embedded electronics; exhibitors include Texas Instruments and STMicroelectronics.",
@@ -1440,12 +1440,41 @@
    "id": "ape27"
   },
   {
+   "id": "dccool27",
+   "name": "Southeast Asia Data Center Cooling & Thermal Management Summit 2027",
+   "start": "2027-03-15",
+   "end": "2027-03-16",
+   "dateStatus": "reported",
+   "venue": "Singapore",
+   "org": "Conference Inc / Eco-Business listing",
+   "desc": "Summit on cooling and thermal management for data centres.",
+   "type": "conference",
+   "fit": {
+    "dcoi": [
+     3,
+     "Data centre power and cooling systems"
+    ]
+   },
+   "aud": [
+    "Staff"
+   ],
+   "cost": "Paid",
+   "url": "https://www.eco-business.com/events/southeast-asia-data-center-cooling-thermal-management-summit-2027/",
+   "reg": "tbc",
+   "source": {
+    "label": "eco-business.com",
+    "url": "https://www.eco-business.com/events/southeast-asia-data-center-cooling-thermal-management-summit-2027/"
+   },
+   "checked": "2026-11-16",
+   "added": "2026-11-16"
+  },
+  {
    "added": "2026-11-15",
    "aud": [
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Free to enter",
    "dateStatus": "confirmed",
    "desc": "National robotics showcase; hosts the finals of the Embodied AI Challenge for manufacturing (S$88,000 prize pool, open to student teams).",
@@ -1478,7 +1507,7 @@
    "aud": [
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Check site",
    "dateStatus": "reported",
    "desc": "National capture-the-flag competition focused on digital forensics and incident response, open to university, polytechnic, JC and ITE students.",
@@ -1519,7 +1548,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Check site",
    "dateStatus": "confirmed",
    "desc": "Two-day generative and agentic AI summit with keynotes, an exhibition, a start-up arena and AI awards.",
@@ -1555,6 +1584,42 @@
    "url": "https://genaixworld.com/",
    "venue": "Singapore EXPO",
    "id": "genaix27"
+  },
+  {
+   "id": "aicsa27",
+   "name": "AI Coding Summit Asia 2027",
+   "start": "2027-04-16",
+   "end": "2027-04-16",
+   "dateStatus": "reported",
+   "dateNote": "Organiser ticket page lists 16 Apr in Singapore; remote day 20 Apr",
+   "venue": "Singapore",
+   "org": "GitNation",
+   "desc": "One-day developer conference on AI-assisted coding and agentic software engineering.",
+   "type": "conference",
+   "fit": {
+    "iad": [
+     3,
+     "'Software Development Practices', 'Server-side Development'"
+    ],
+    "cmo": [
+     1,
+     "DevOps automation: 'infrastructure automation'"
+    ]
+   },
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "cost": "Paid",
+   "url": "https://ti.to/gitnation/ai-coding-summit-asia-2027",
+   "reg": "tbc",
+   "source": {
+    "label": "ti.to GitNation",
+    "url": "https://ti.to/gitnation/ai-coding-summit-asia-2027"
+   },
+   "ai": true,
+   "checked": "2026-11-16",
+   "added": "2026-11-16"
   },
   {
    "id": "iclr27",
@@ -1593,7 +1658,7 @@
     "url": "https://www.startuphub.ai/conferences/iclr"
    },
    "ai": true,
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "added": "2026-11-15"
   },
   {
@@ -1601,7 +1666,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Visitor pass (check site)",
    "dateNote": "Listing sites give 29–30 Apr; not yet on the organiser's site.",
    "dateStatus": "reported",
@@ -1656,57 +1721,11 @@
    "id": "gx27"
   },
   {
-   "added": "2026-11-15",
-   "ai": true,
    "aud": [
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
-   "cost": "Expo free; conference paid",
-   "dateNote": "Runs with ATxSG, expected 26–28 May 2027",
-   "dateStatus": "estimated",
-   "desc": "Enterprise AI conference and expo inside Asia Tech x Singapore.",
-   "end": "2027-05-01",
-   "fit": {
-    "bis": [
-     2,
-     "AI for business: 'Business Analytics', 'Business Intelligence'"
-    ],
-    "cmo": [
-     1,
-     "Running AI workloads in the cloud: cloud service operation"
-    ],
-    "ee": [
-     1,
-     "AI & Automation specialisation: 'AI Fundamentals', 'AI Applications'"
-    ],
-    "iad": [
-     3,
-     "Building AI apps: 'Server-side Development', 'Enterprise Solutions Development'"
-    ]
-   },
-   "free": false,
-   "name": "The AI Summit Singapore 2027",
-   "org": "Informa Tech, part of Asia Tech x Singapore",
-   "reg": "tbc",
-   "source": {
-    "label": "www.showsbee.com",
-    "url": "https://www.showsbee.com/fairs/102283-The-AI-Summit-Singapore-2027.html"
-   },
-   "start": "2027-05-01",
-   "tba": true,
-   "type": "conference",
-   "url": "https://asiatechxsg.com/aisummitsingapore/",
-   "venue": "Singapore EXPO (at ATxEnterprise)",
-   "id": "aisum27"
-  },
-  {
-   "aud": [
-    "Staff",
-    "Students"
-   ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Free",
    "dateNote": "AWS has not announced 2027 dates. The 2026 summit was on 6 May.",
    "dateStatus": "estimated",
@@ -1759,7 +1778,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Check site",
    "dateStatus": "confirmed",
    "desc": "Supply chain and intralogistics show with autonomous mobile robots, picking robots and vision systems.",
@@ -1793,7 +1812,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Visitor registration (check site)",
    "dateNote": "Held in Kuala Lumpur, so a visit would be an overseas trip.",
    "dateStatus": "confirmed",
@@ -1821,10 +1840,55 @@
    "id": "semi27"
   },
   {
+   "added": "2026-11-15",
+   "ai": true,
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-16",
+   "cost": "Expo free; conference paid",
+   "dateNote": "Runs inside ATxEnterprise; dates from ATxSG official FAQ",
+   "dateStatus": "reported",
+   "desc": "Enterprise AI conference and expo inside Asia Tech x Singapore.",
+   "end": "2027-05-28",
+   "fit": {
+    "bis": [
+     2,
+     "AI for business: 'Business Analytics', 'Business Intelligence'"
+    ],
+    "cmo": [
+     1,
+     "Running AI workloads in the cloud: cloud service operation"
+    ],
+    "ee": [
+     1,
+     "AI & Automation specialisation: 'AI Fundamentals', 'AI Applications'"
+    ],
+    "iad": [
+     3,
+     "Building AI apps: 'Server-side Development', 'Enterprise Solutions Development'"
+    ]
+   },
+   "free": false,
+   "name": "The AI Summit Singapore 2027",
+   "org": "Informa Tech, part of Asia Tech x Singapore",
+   "reg": "tbc",
+   "source": {
+    "label": "asiatechxsg.com FAQ",
+    "url": "https://asiatechxsg.com/faq/"
+   },
+   "start": "2027-05-26",
+   "type": "conference",
+   "url": "https://asiatechxsg.com/aisummitsingapore/",
+   "venue": "Singapore EXPO (at ATxEnterprise)",
+   "id": "aisum27"
+  },
+  {
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Check site",
    "dateNote": "ATxSummit 26–27 May at Capella (by invitation); ATxEnterprise 26–28 May at Singapore EXPO Halls 3–5.",
    "dateStatus": "confirmed",
@@ -1876,7 +1940,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Usually free",
    "dateNote": "Held late June in 2026",
    "dateStatus": "estimated",
@@ -1914,7 +1978,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Usually free",
    "dateNote": "Held 26 Aug in 2026",
    "dateStatus": "estimated",
@@ -1956,7 +2020,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Paid",
    "dateNote": "Organiser says 2027 date is indicative",
    "dateStatus": "reported",
@@ -1992,7 +2056,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Usually free",
    "dateNote": "Held 16 Sep in 2026",
    "dateStatus": "estimated",
@@ -2032,7 +2096,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Paid",
    "dateNote": "Moved from June to September. A 36-hour hackathon runs 7–9 Sep.",
    "dateStatus": "confirmed",
@@ -2071,11 +2135,57 @@
    "id": "sai27"
   },
   {
+   "id": "awsps27",
+   "name": "AWS Public Sector Day Singapore 2027",
+   "start": "2027-10-01",
+   "end": "2027-10-01",
+   "tba": true,
+   "dateStatus": "estimated",
+   "dateNote": "Past editions: 5 Oct 2023, 3 Oct 2024, 30 Sep 2025 (all Raffles City). No 2026 or 2027 date announced yet.",
+   "venue": "Raffles City Convention Centre, Singapore (past venue)",
+   "org": "Amazon Web Services and GovInsider",
+   "desc": "One-day AWS event for Singapore government, education and healthcare agencies on cloud, generative AI and digital services.",
+   "type": "conference",
+   "fit": {
+    "cmo": [
+     2,
+     "Public-sector cloud adoption: cloud service operation, cloud security"
+    ],
+    "bis": [
+     1,
+     "Digital government systems: 'Enterprise Systems Process'"
+    ],
+    "isn": [
+     1,
+     "'Cloud System Administration'"
+    ],
+    "csf": [
+     1,
+     "Cloud and data security for government: risk & compliance"
+    ]
+   },
+   "aud": [
+    "Staff"
+   ],
+   "cost": "Free (past editions)",
+   "free": false,
+   "url": "https://govinsider.asia/intl-en/event/public-sector-day-singapore",
+   "reg": "tbc",
+   "source": {
+    "label": "govinsider.asia",
+    "url": "https://govinsider.asia/intl-en/event/public-sector-day-singapore"
+   },
+   "vendor": true,
+   "ai": false,
+   "checked": "2026-11-16",
+   "added": "2026-11-15"
+  },
+  {
    "aud": [
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Exhibition pass (check site)",
    "dateNote": "Held every October during SICW; 2027 dates not announced.",
    "dateStatus": "estimated",
@@ -2124,7 +2234,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Usually free",
    "dateNote": "Held 12 Oct in 2026; was Feb in 2025",
    "dateStatus": "estimated",
@@ -2172,7 +2282,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Mostly by invitation",
    "dateNote": "Held every October; 2027 dates not announced.",
    "dateStatus": "estimated",
@@ -2208,57 +2318,11 @@
    "id": "sicw27"
   },
   {
-   "id": "awsps27",
-   "name": "AWS Public Sector Day Singapore 2027",
-   "start": "2027-10-01",
-   "end": "2027-10-01",
-   "tba": true,
-   "dateStatus": "estimated",
-   "dateNote": "Past editions: 5 Oct 2023, 3 Oct 2024, 30 Sep 2025 (all Raffles City). No 2026 or 2027 date announced yet.",
-   "venue": "Raffles City Convention Centre, Singapore (past venue)",
-   "org": "Amazon Web Services and GovInsider",
-   "desc": "One-day AWS event for Singapore government, education and healthcare agencies on cloud, generative AI and digital services.",
-   "type": "conference",
-   "fit": {
-    "cmo": [
-     2,
-     "Public-sector cloud adoption: cloud service operation, cloud security"
-    ],
-    "bis": [
-     1,
-     "Digital government systems: 'Enterprise Systems Process'"
-    ],
-    "isn": [
-     1,
-     "'Cloud System Administration'"
-    ],
-    "csf": [
-     1,
-     "Cloud and data security for government: risk & compliance"
-    ]
-   },
-   "aud": [
-    "Staff"
-   ],
-   "cost": "Free (past editions)",
-   "free": false,
-   "url": "https://govinsider.asia/intl-en/event/public-sector-day-singapore",
-   "reg": "tbc",
-   "source": {
-    "label": "govinsider.asia",
-    "url": "https://govinsider.asia/intl-en/event/public-sector-day-singapore"
-   },
-   "vendor": true,
-   "ai": false,
-   "checked": "2026-11-15",
-   "added": "2026-11-15"
-  },
-  {
    "aud": [
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Free trade visitor registration",
    "dateStatus": "confirmed",
    "desc": "Co-located shows including Cloud & AI Infrastructure Asia, Data Centre World Asia, Cyber Security World Asia, DevOps Live and Big Data & AI World.",
@@ -2314,7 +2378,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Free trade registration",
    "dateNote": "Held 10–12 Nov in 2026",
    "dateStatus": "estimated",
@@ -2353,7 +2417,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Paid",
    "dateNote": "Held every November; 2027 dates not announced.",
    "dateStatus": "estimated",
@@ -2401,7 +2465,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Trade pass (check site)",
    "dateNote": "2025 and 2026 editions were in November; 2027 dates not announced.",
    "dateStatus": "estimated",
@@ -2477,7 +2541,7 @@
     "url": "https://neuronfeed.com/conferences?topic=AI"
    },
    "ai": true,
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "added": "2026-11-15"
   },
   {
@@ -2486,7 +2550,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Free visitor registration (check site)",
    "dateStatus": "estimated",
    "desc": "Three co-located expos on photonics, semiconductors and embedded electronics; exhibitors include Texas Instruments and STMicroelectronics.",
@@ -2522,7 +2586,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Visitor pass (check site)",
    "dateNote": "Usually April at Marina Bay Sands (2026: 9–10 Apr; 2027: 29–30 Apr). 2028 dates not announced.",
    "dateStatus": "estimated",
@@ -2580,63 +2644,9 @@
   },
   {
    "aud": [
-    "Staff",
-    "Students"
-   ],
-   "checked": "2026-11-15",
-   "cost": "Free",
-   "dateStatus": "estimated",
-   "desc": "One-day cloud conference with technical sessions, an expo and certification lounges.",
-   "end": "2028-05-01",
-   "fit": {
-    "bis": [
-     1,
-     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
-    ],
-    "cmo": [
-     3,
-     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
-    ],
-    "cns": [
-     1,
-     "'Cloud Security', 'Container Security'"
-    ],
-    "dcoi": [
-     1,
-     "Network, server and storage monitoring"
-    ],
-    "iad": [
-     2,
-     "Serverless apps: 'Server-side Development'"
-    ],
-    "isn": [
-     2,
-     "'Cloud System Administration', 'Virtualisation Fundamentals'"
-    ]
-   },
-   "free": true,
-   "name": "AWS Summit Singapore 2028",
-   "org": "Amazon Web Services",
-   "reg": "tbc",
-   "source": {
-    "label": "aws.amazon.com",
-    "url": "https://aws.amazon.com/summits/singapore"
-   },
-   "start": "2028-05-01",
-   "type": "conference",
-   "url": "https://aws.amazon.com/events/summits/singapore/",
-   "vendor": true,
-   "venue": "Sands Expo & Convention Centre, Singapore",
-   "id": "aws28",
-   "dateNote": "Usually May (6 May 2026); 2028 date not announced.",
-   "added": "2026-11-15",
-   "tba": true
-  },
-  {
-   "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Check site",
    "dateStatus": "estimated",
    "desc": "Singapore's flagship tech event: ATxSummit (by invitation) plus the ATxEnterprise exhibition with CommunicAsia, BroadcastAsia, SatelliteAsia and The AI Summit.",
@@ -2689,7 +2699,61 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
+   "cost": "Free",
+   "dateStatus": "estimated",
+   "desc": "One-day cloud conference with technical sessions, an expo and certification lounges.",
+   "end": "2028-05-01",
+   "fit": {
+    "bis": [
+     1,
+     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
+    ],
+    "cmo": [
+     3,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     1,
+     "'Cloud Security', 'Container Security'"
+    ],
+    "dcoi": [
+     1,
+     "Network, server and storage monitoring"
+    ],
+    "iad": [
+     2,
+     "Serverless apps: 'Server-side Development'"
+    ],
+    "isn": [
+     2,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": true,
+   "name": "AWS Summit Singapore 2028",
+   "org": "Amazon Web Services",
+   "reg": "tbc",
+   "source": {
+    "label": "aws.amazon.com",
+    "url": "https://aws.amazon.com/summits/singapore"
+   },
+   "start": "2028-05-01",
+   "type": "conference",
+   "url": "https://aws.amazon.com/events/summits/singapore/",
+   "vendor": true,
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "aws28",
+   "dateNote": "Usually May (6 May 2026); 2028 date not announced.",
+   "added": "2026-11-15",
+   "tba": true
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-16",
    "cost": "Exhibition pass (check site)",
    "dateStatus": "estimated",
    "desc": "Asia's cybersecurity conference and exhibition, the anchor event of SICW.",
@@ -2737,7 +2801,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Mostly by invitation",
    "dateStatus": "estimated",
    "desc": "Government-led week of cybersecurity conferences, with GovWare as its exhibition.",
@@ -2778,7 +2842,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-15",
+   "checked": "2026-11-16",
    "cost": "Free trade visitor registration",
    "dateStatus": "estimated",
    "desc": "Five co-located shows: Cloud & AI Infrastructure Asia, DevOps Live Asia, Big Data & AI World Asia, Cyber Security World Asia and Data Centre World Asia.",
