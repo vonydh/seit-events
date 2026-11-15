@@ -2,7 +2,7 @@
  "meta": {
   "lastChecked": "2026-11-15T15:35:16+08:00",
   "method": "Web crawl of organiser sites, venue calendars and event listings",
-  "sources": 55
+  "sources": 54
  },
  "events": [
   {
@@ -2125,6 +2125,52 @@
    "url": "https://www.sicw.gov.sg/",
    "venue": "Singapore",
    "id": "sicw27"
+  },
+  {
+   "id": "awsps27",
+   "name": "AWS Public Sector Day Singapore 2027",
+   "start": "2027-10-01",
+   "end": "2027-10-01",
+   "tba": true,
+   "dateStatus": "estimated",
+   "dateNote": "Past editions: 5 Oct 2023, 3 Oct 2024, 30 Sep 2025 (all Raffles City). No 2026 or 2027 date announced yet.",
+   "venue": "Raffles City Convention Centre, Singapore (past venue)",
+   "org": "Amazon Web Services and GovInsider",
+   "desc": "One-day AWS event for Singapore government, education and healthcare agencies on cloud, generative AI and digital services.",
+   "type": "conference",
+   "fit": {
+    "cmo": [
+     2,
+     "Public-sector cloud adoption: cloud service operation, cloud security"
+    ],
+    "bis": [
+     1,
+     "Digital government systems: 'Enterprise Systems Process'"
+    ],
+    "isn": [
+     1,
+     "'Cloud System Administration'"
+    ],
+    "csf": [
+     1,
+     "Cloud and data security for government: risk & compliance"
+    ]
+   },
+   "aud": [
+    "Staff"
+   ],
+   "cost": "Free (past editions)",
+   "free": false,
+   "url": "https://govinsider.asia/intl-en/event/public-sector-day-singapore",
+   "reg": "tbc",
+   "source": {
+    "label": "govinsider.asia",
+    "url": "https://govinsider.asia/intl-en/event/public-sector-day-singapore"
+   },
+   "vendor": true,
+   "ai": false,
+   "checked": "2026-11-15",
+   "added": "2026-11-15"
   },
   {
    "aud": [
