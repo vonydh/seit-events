@@ -2,7 +2,7 @@
  "meta": {
   "lastChecked": "2026-11-15T15:35:16+08:00",
   "method": "Web crawl of organiser sites, venue calendars and event listings",
-  "sources": 54
+  "sources": 62
  },
  "events": [
   {
@@ -1364,6 +1364,47 @@
    "id": "bh27"
   },
   {
+   "id": "sca27",
+   "name": "SupercomputingAsia 2027",
+   "start": "2027-03-01",
+   "end": "2027-03-04",
+   "dateStatus": "reported",
+   "dateNote": "Dates from an NSCC news listing; confirm on the organiser site.",
+   "venue": "Singapore",
+   "org": "National Supercomputing Centre (NSCC) Singapore",
+   "desc": "Asia's conference on high-performance computing, AI infrastructure and quantum, with an exhibition.",
+   "type": "conference",
+   "fit": {
+    "dcoi": [
+     2,
+     "HPC data centres: power, cooling, server/storage monitoring"
+    ],
+    "cmo": [
+     2,
+     "AI and HPC infrastructure: cloud service operation, infrastructure automation"
+    ],
+    "isn": [
+     1,
+     "'System Administration'"
+    ]
+   },
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "cost": "Paid",
+   "free": false,
+   "url": "https://www.nscc.sg/",
+   "reg": "tbc",
+   "source": {
+    "label": "nscc.sg",
+    "url": "https://www.nscc.sg/portfolio/item/new-dates-supercomputingasia-2027-1-4-march-2027/"
+   },
+   "ai": true,
+   "checked": "2026-11-15",
+   "added": "2026-11-15"
+  },
+  {
    "added": "2026-11-15",
    "aud": [
     "Staff",
@@ -1514,6 +1555,46 @@
    "url": "https://genaixworld.com/",
    "venue": "Singapore EXPO",
    "id": "genaix27"
+  },
+  {
+   "id": "iclr27",
+   "name": "ICLR 2027: International Conference on Learning Representations",
+   "start": "2027-04-26",
+   "end": "2027-04-30",
+   "dateStatus": "reported",
+   "dateNote": "Only one listing gives Singapore (Suntec) for 2027; confirm on iclr.cc.",
+   "venue": "Suntec Singapore Convention Centre",
+   "org": "ICLR",
+   "desc": "One of the world's top machine learning research conferences.",
+   "type": "conference",
+   "fit": {
+    "iad": [
+     2,
+     "AI research to apps: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "ee": [
+     2,
+     "AI & Automation: 'AI Fundamentals', 'AI Applications'"
+    ],
+    "bis": [
+     1,
+     "'Business Analytics'"
+    ]
+   },
+   "aud": [
+    "Staff"
+   ],
+   "cost": "Paid",
+   "free": false,
+   "url": "https://iclr.cc/",
+   "reg": "tbc",
+   "source": {
+    "label": "startuphub.ai",
+    "url": "https://www.startuphub.ai/conferences/iclr"
+   },
+   "ai": true,
+   "checked": "2026-11-15",
+   "added": "2026-11-15"
   },
   {
    "aud": [
@@ -2358,6 +2439,396 @@
    "url": "",
    "venue": "Sands Expo & Convention Centre, Singapore",
    "id": "ssa27"
+  },
+  {
+   "id": "cai27",
+   "name": "IEEE Conference on Artificial Intelligence (CAI) 2027",
+   "start": "2027-11-30",
+   "end": "2027-12-02",
+   "dateStatus": "reported",
+   "dateNote": "From a conference calendar listing; confirm on the IEEE CAI site.",
+   "venue": "Marina Bay Sands, Singapore",
+   "org": "IEEE",
+   "desc": "IEEE conference on applied AI across industries, with papers, tutorials and an industry track.",
+   "type": "conference",
+   "fit": {
+    "ee": [
+     2,
+     "AI & Automation: 'AI Fundamentals', 'AI Applications', 'Autonomous System Applications'"
+    ],
+    "iad": [
+     2,
+     "Building AI applications: 'Enterprise Solutions Development'"
+    ],
+    "bis": [
+     1,
+     "'Business Analytics'"
+    ]
+   },
+   "aud": [
+    "Staff"
+   ],
+   "cost": "Paid",
+   "free": false,
+   "url": "https://cai.ieee.org/",
+   "reg": "tbc",
+   "source": {
+    "label": "neuronfeed.com",
+    "url": "https://neuronfeed.com/conferences?topic=AI"
+   },
+   "ai": true,
+   "checked": "2026-11-15",
+   "added": "2026-11-15"
+  },
+  {
+   "added": "2026-11-15",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free visitor registration (check site)",
+   "dateStatus": "estimated",
+   "desc": "Three co-located expos on photonics, semiconductors and embedded electronics; exhibitors include Texas Instruments and STMicroelectronics.",
+   "end": "2028-03-01",
+   "fit": {
+    "ee": [
+     3,
+     "Embedded electronics: 'Microcontroller Applications', 'Sensors & Actuators', 'Digital Applications'"
+    ],
+    "ssi": [
+     1,
+     "Sensors and imaging for security devices"
+    ]
+   },
+   "free": false,
+   "name": "Asia Photonics Expo + Asia Semiconductor Expo 2028",
+   "org": "Asia Photonics Expo (APE)",
+   "reg": "tbc",
+   "source": {
+    "label": "showsbee.com",
+    "url": "https://www.showsbee.com/fairs/106313-Asia-Photonics-Expo-2028.html"
+   },
+   "start": "2028-03-01",
+   "type": "exhibition",
+   "url": "https://www.asiaphotonicsexpo.com/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "ape28",
+   "dateNote": "Held Feb 2026 and 3–5 Mar 2027; 2028 dates not announced.",
+   "tba": true
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Visitor pass (check site)",
+   "dateNote": "Usually April at Marina Bay Sands (2026: 9–10 Apr; 2027: 29–30 Apr). 2028 dates not announced.",
+   "dateStatus": "estimated",
+   "desc": "Large tech exhibition on AI, cloud, data centres, cybersecurity and start-ups.",
+   "end": "2028-04-01",
+   "fit": {
+    "bis": [
+     2,
+     "'Application Development' with AI for business"
+    ],
+    "cmo": [
+     2,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     2,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     1,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "dcoi": [
+     2,
+     "Data centre power, cooling, fire protection and server/storage monitoring"
+    ],
+    "ee": [
+     1,
+     "AI & Automation: 'AI Applications', 'Autonomous System Applications'"
+    ],
+    "iad": [
+     3,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "isn": [
+     1,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": false,
+   "name": "GITEX AI Asia 2028",
+   "org": "KAOUN International",
+   "reg": "tbc",
+   "source": {
+    "label": "showsbee.com",
+    "url": "https://www.showsbee.com/fairs/106967-GITEX-ASIA-2028.html"
+   },
+   "start": "2028-04-01",
+   "type": "exhibition",
+   "url": "https://gitexasia.com/",
+   "venue": "Marina Bay Sands Expo, Singapore",
+   "id": "gx28",
+   "added": "2026-11-15",
+   "tba": true
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free",
+   "dateStatus": "estimated",
+   "desc": "One-day cloud conference with technical sessions, an expo and certification lounges.",
+   "end": "2028-05-01",
+   "fit": {
+    "bis": [
+     1,
+     "'Business Analytics', 'Business Intelligence', 'Database Essentials'"
+    ],
+    "cmo": [
+     3,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     1,
+     "'Cloud Security', 'Container Security'"
+    ],
+    "dcoi": [
+     1,
+     "Network, server and storage monitoring"
+    ],
+    "iad": [
+     2,
+     "Serverless apps: 'Server-side Development'"
+    ],
+    "isn": [
+     2,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": true,
+   "name": "AWS Summit Singapore 2028",
+   "org": "Amazon Web Services",
+   "reg": "tbc",
+   "source": {
+    "label": "aws.amazon.com",
+    "url": "https://aws.amazon.com/summits/singapore"
+   },
+   "start": "2028-05-01",
+   "type": "conference",
+   "url": "https://aws.amazon.com/events/summits/singapore/",
+   "vendor": true,
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "aws28",
+   "dateNote": "Usually May (6 May 2026); 2028 date not announced.",
+   "added": "2026-11-15",
+   "tba": true
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Check site",
+   "dateStatus": "estimated",
+   "desc": "Singapore's flagship tech event: ATxSummit (by invitation) plus the ATxEnterprise exhibition with CommunicAsia, BroadcastAsia, SatelliteAsia and The AI Summit.",
+   "end": "2028-05-01",
+   "fit": {
+    "bis": [
+     2,
+     "'Application Development' with AI for business"
+    ],
+    "cmo": [
+     1,
+     "Cloud service operation, virtualisation, infrastructure automation, DevOps"
+    ],
+    "cns": [
+     1,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "ee": [
+     2,
+     "CommunicAsia: 'Wireless Communications', 'IoT Fundamentals'"
+    ],
+    "iad": [
+     2,
+     "Building apps with AI: 'Server-side Development', 'Enterprise Solutions Development'"
+    ],
+    "isn": [
+     2,
+     "'Enterprise Networking', 'Wireless Networking Fundamentals'"
+    ]
+   },
+   "free": false,
+   "name": "Asia Tech x Singapore 2028",
+   "org": "IMDA and Informa",
+   "reg": "tbc",
+   "source": {
+    "label": "asiatechxsg.com",
+    "url": "https://asiatechxsg.com/"
+   },
+   "start": "2028-05-01",
+   "type": "exhibition",
+   "url": "https://asiatechxsg.com/",
+   "venue": "Singapore EXPO (ATxEnterprise)",
+   "id": "atx28",
+   "dateNote": "Held late May each year; 2028 dates not announced.",
+   "added": "2026-11-15",
+   "tba": true
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Exhibition pass (check site)",
+   "dateStatus": "estimated",
+   "desc": "Asia's cybersecurity conference and exhibition, the anchor event of SICW.",
+   "end": "2028-10-01",
+   "fit": {
+    "cmo": [
+     1,
+     "Cloud security and cloud operations"
+    ],
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "isn": [
+     2,
+     "'Infrastructure Security'"
+    ],
+    "ssi": [
+     2,
+     "OT and physical security: 'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "GovWare Conference & Exhibition 2028",
+   "org": "Sphere Exhibits",
+   "reg": "tbc",
+   "source": {
+    "label": "sicw.gov.sg",
+    "url": "https://www.sicw.gov.sg/"
+   },
+   "start": "2028-10-01",
+   "type": "exhibition",
+   "url": "https://www.govware.sg/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "gw28",
+   "dateNote": "Runs with Singapore International Cyber Week each October; 2028 dates not announced.",
+   "added": "2026-11-15",
+   "tba": true
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Mostly by invitation",
+   "dateStatus": "estimated",
+   "desc": "Government-led week of cybersecurity conferences, with GovWare as its exhibition.",
+   "end": "2028-10-01",
+   "fit": {
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Risk & compliance, security incident management"
+    ],
+    "ssi": [
+     1,
+     "'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "Singapore International Cyber Week 2028",
+   "org": "Cyber Security Agency of Singapore",
+   "reg": "tbc",
+   "source": {
+    "label": "sicw.gov.sg",
+    "url": "https://www.sicw.gov.sg/"
+   },
+   "start": "2028-10-01",
+   "type": "conference",
+   "url": "https://www.sicw.gov.sg/",
+   "venue": "Sands Expo & Convention Centre and other venues",
+   "id": "sicw28",
+   "dateNote": "Held every October; 2028 dates not announced.",
+   "added": "2026-11-15",
+   "tba": true
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-15",
+   "cost": "Free trade visitor registration",
+   "dateStatus": "estimated",
+   "desc": "Five co-located shows: Cloud & AI Infrastructure Asia, DevOps Live Asia, Big Data & AI World Asia, Cyber Security World Asia and Data Centre World Asia.",
+   "end": "2028-10-01",
+   "fit": {
+    "bis": [
+     2,
+     "Big Data & AI World: 'Business Analytics'"
+    ],
+    "cmo": [
+     3,
+     "Cloud & AI Infrastructure Asia, DevOps Live: cloud operations and DevOps"
+    ],
+    "cns": [
+     3,
+     "Cyber Security World Asia: 'Security Operations', 'IT Security'"
+    ],
+    "csf": [
+     2,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "dcoi": [
+     3,
+     "Data Centre World Asia: power, cooling and facility operations"
+    ],
+    "iad": [
+     2,
+     "DevOps Live: 'Software Development Practices'"
+    ],
+    "isn": [
+     2,
+     "'Cloud System Administration', 'Virtualisation Fundamentals'"
+    ]
+   },
+   "free": true,
+   "name": "Tech Week Singapore 2028",
+   "org": "CloserStill Media",
+   "reg": "tbc",
+   "source": {
+    "label": "singaporetechnologyweek.com",
+    "url": "https://www.singaporetechnologyweek.com/"
+   },
+   "start": "2028-10-01",
+   "type": "exhibition",
+   "url": "https://www.singaporetechnologyweek.com/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "tw28",
+   "dateNote": "Held Sep/Oct each year (13–14 Oct 2027); 2028 dates not announced.",
+   "added": "2026-11-15",
+   "tba": true
   }
  ]
 }
