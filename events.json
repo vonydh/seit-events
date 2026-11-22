@@ -1,8 +1,8 @@
 {
  "meta": {
-  "lastChecked": "2026-11-19T07:15:00+08:00",
+  "lastChecked": "2026-11-23T09:00:00+08:00",
   "method": "Web crawl of organiser sites, venue calendars and event listings",
-  "sources": 64
+  "sources": 65
  },
  "events": [
   {
@@ -1329,7 +1329,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "cost": "Paid; Business Hall pass is usually free",
    "dateNote": "Business Hall 2–3 Mar; AI Security Summit 1 Mar. Black Hat's events page still shows TBA.",
    "dateStatus": "confirmed",
@@ -1402,7 +1402,7 @@
     "url": "https://www.nscc.sg/portfolio/item/new-dates-supercomputingasia-2027-1-4-march-2027/"
    },
    "ai": true,
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "added": "2026-11-15"
   },
   {
@@ -1411,7 +1411,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "cost": "Free visitor registration (check site)",
    "dateStatus": "confirmed",
    "desc": "Three co-located expos on photonics, semiconductors and embedded electronics; exhibitors include Texas Instruments and STMicroelectronics.",
@@ -1466,7 +1466,7 @@
     "label": "eco-business.com",
     "url": "https://www.eco-business.com/events/southeast-asia-data-center-cooling-thermal-management-summit-2027/"
    },
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "added": "2026-11-16"
   },
   {
@@ -1508,7 +1508,7 @@
    "aud": [
     "Students"
    ],
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "cost": "Check site",
    "dateStatus": "reported",
    "desc": "National capture-the-flag competition focused on digital forensics and incident response, open to university, polytechnic, JC and ITE students.",
@@ -1549,7 +1549,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "cost": "Check site",
    "dateStatus": "confirmed",
    "desc": "Two-day generative and agentic AI summit with keynotes, an exhibition, a start-up arena and AI awards.",
@@ -1847,7 +1847,7 @@
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "cost": "Expo free; conference paid",
    "dateNote": "Runs inside ATxEnterprise; dates from ATxSG official FAQ",
    "dateStatus": "reported",
@@ -1889,7 +1889,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "cost": "Check site",
    "dateNote": "ATxSummit 26–27 May at Capella (by invitation); ATxEnterprise 26–28 May at Singapore EXPO Halls 3–5.",
    "dateStatus": "confirmed",
@@ -2097,7 +2097,7 @@
    "aud": [
     "Staff"
    ],
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "cost": "Paid",
    "dateNote": "Moved from June to September. A 36-hour hackathon runs 7–9 Sep.",
    "dateStatus": "confirmed",
@@ -2182,54 +2182,6 @@
    "added": "2026-11-15"
   },
   {
-   "aud": [
-    "Staff",
-    "Students"
-   ],
-   "checked": "2026-11-19",
-   "cost": "Exhibition pass (check site)",
-   "dateNote": "GovWare is SICW anchor event; likely within 25-27 Oct 2027 (inferred, not yet listed)",
-   "dateStatus": "estimated",
-   "desc": "Asia's cybersecurity conference and exhibition, the anchor event of SICW.",
-   "end": "2027-10-01",
-   "fit": {
-    "cmo": [
-     1,
-     "Cloud security and cloud operations"
-    ],
-    "cns": [
-     3,
-     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
-    ],
-    "csf": [
-     3,
-     "Cyber forensics, security incident management, security assessment & testing"
-    ],
-    "isn": [
-     2,
-     "'Infrastructure Security'"
-    ],
-    "ssi": [
-     2,
-     "OT and physical security: 'Cybersecurity for Physical System'"
-    ]
-   },
-   "free": false,
-   "name": "GovWare Conference & Exhibition 2027",
-   "org": "Sphere Exhibits",
-   "reg": "tbc",
-   "source": {
-    "label": "govware.sg",
-    "url": "https://www.govware.sg/"
-   },
-   "start": "2027-10-01",
-   "tba": true,
-   "type": "exhibition",
-   "url": "https://www.govware.sg/",
-   "venue": "Sands Expo & Convention Centre, Singapore",
-   "id": "gw27"
-  },
-  {
    "added": "2026-11-15",
    "aud": [
     "Staff",
@@ -2280,49 +2232,47 @@
    "id": "msai27"
   },
   {
-   "aud": [
-    "Staff"
-   ],
-   "checked": "2026-11-19",
-   "cost": "Mostly by invitation",
-   "dateNote": "Save-the-date on official SICW site",
-   "dateStatus": "confirmed",
-   "desc": "Government-led week of cybersecurity conferences, with GovWare as its exhibition.",
-   "end": "2027-10-27",
+   "id": "dcw27",
+   "name": "Data Centre World Asia 2027",
+   "start": "2027-10-13",
+   "end": "2027-10-14",
+   "dateStatus": "reported",
+   "dateNote": "Part of Tech Week Singapore; one listing gives a different venue",
+   "venue": "Marina Bay Sands, Singapore",
+   "org": "CloserStill Media",
+   "desc": "Data centre exhibition and conference on infrastructure, power and cooling, co-located with Tech Week Singapore.",
+   "type": "exhibition",
    "fit": {
-    "cns": [
+    "dcoi": [
      3,
-     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+     "Power and cooling systems, data centre security, network/server monitoring"
     ],
-    "csf": [
-     3,
-     "Risk & compliance, security incident management"
-    ],
-    "ssi": [
+    "cmo": [
      1,
-     "'Cybersecurity for Physical System'"
+     "Virtualisation and cloud service operation"
     ]
    },
-   "free": false,
-   "name": "Singapore International Cyber Week 2027",
-   "org": "Cyber Security Agency of Singapore",
-   "reg": "tbc",
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "cost": "Check site",
+   "url": "https://www.singaporetechnologyweek.com/data-centre-world",
+   "reg": "interest",
+   "regNote": "Register-interest page reported open",
    "source": {
-    "label": "Singapore International Cyber Week",
-    "url": "https://sicw.gov.sg/"
+    "label": "Tech Week Singapore",
+    "url": "https://www.singaporetechnologyweek.com/data-centre-world"
    },
-   "start": "2027-10-25",
-   "type": "conference",
-   "url": "https://www.sicw.gov.sg/",
-   "venue": "Singapore",
-   "id": "sicw27"
+   "checked": "2026-11-23",
+   "added": "2026-11-23"
   },
   {
    "aud": [
     "Staff",
     "Students"
    ],
-   "checked": "2026-11-19",
+   "checked": "2026-11-23",
    "cost": "Free trade visitor registration",
    "dateStatus": "confirmed",
    "desc": "Co-located shows including Cloud & AI Infrastructure Asia, Data Centre World Asia, Cyber Security World Asia, DevOps Live and Big Data & AI World.",
@@ -2371,6 +2321,90 @@
    "url": "https://www.singaporetechnologyweek.com/",
    "venue": "Sands Expo & Convention Centre, Singapore",
    "id": "tw27"
+  },
+  {
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "checked": "2026-11-23",
+   "cost": "Exhibition pass (check site)",
+   "dateStatus": "confirmed",
+   "desc": "Asia's cybersecurity conference and exhibition, the anchor event of SICW.",
+   "end": "2027-10-27",
+   "fit": {
+    "cmo": [
+     1,
+     "Cloud security and cloud operations"
+    ],
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Cyber forensics, security incident management, security assessment & testing"
+    ],
+    "isn": [
+     2,
+     "'Infrastructure Security'"
+    ],
+    "ssi": [
+     2,
+     "OT and physical security: 'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "GovWare Conference & Exhibition 2027",
+   "org": "Sphere Exhibits",
+   "reg": "tbc",
+   "source": {
+    "label": "sicw.gov.sg",
+    "url": "https://sicw.gov.sg/"
+   },
+   "start": "2027-10-25",
+   "type": "exhibition",
+   "url": "https://www.govware.sg/",
+   "venue": "Sands Expo & Convention Centre, Singapore",
+   "id": "gw27"
+  },
+  {
+   "aud": [
+    "Staff"
+   ],
+   "checked": "2026-11-23",
+   "cost": "Mostly by invitation",
+   "dateNote": "Save-the-date on official SICW site",
+   "dateStatus": "confirmed",
+   "desc": "Government-led week of cybersecurity conferences, with GovWare as its exhibition.",
+   "end": "2027-10-27",
+   "fit": {
+    "cns": [
+     3,
+     "'Security Operations', 'Security Vulnerability Testing', 'IT Security'"
+    ],
+    "csf": [
+     3,
+     "Risk & compliance, security incident management"
+    ],
+    "ssi": [
+     1,
+     "'Cybersecurity for Physical System'"
+    ]
+   },
+   "free": false,
+   "name": "Singapore International Cyber Week 2027",
+   "org": "Cyber Security Agency of Singapore",
+   "reg": "tbc",
+   "source": {
+    "label": "Singapore International Cyber Week",
+    "url": "https://sicw.gov.sg/"
+   },
+   "start": "2027-10-25",
+   "type": "conference",
+   "url": "https://www.sicw.gov.sg/",
+   "venue": "Singapore",
+   "id": "sicw27"
   },
   {
    "added": "2026-11-15",
@@ -2503,6 +2537,41 @@
    "url": "",
    "venue": "Sands Expo & Convention Centre, Singapore",
    "id": "ssa27"
+  },
+  {
+   "id": "switch27",
+   "name": "SWITCH 2027 (Singapore Week of Innovation and Technology)",
+   "start": "2027-11-02",
+   "end": "2027-11-04",
+   "dateStatus": "reported",
+   "dateNote": "Organiser says details to come",
+   "venue": "Singapore",
+   "org": "SWITCH organisers",
+   "desc": "Annual Singapore innovation and technology festival.",
+   "type": "conference",
+   "fit": {
+    "ee": [
+     2,
+     "'IoT Fundamentals', 'AI Applications'"
+    ],
+    "iad": [
+     1,
+     "Software and mobile apps trends"
+    ]
+   },
+   "aud": [
+    "Staff",
+    "Students"
+   ],
+   "cost": "Check site",
+   "url": "https://switchsg.org/",
+   "reg": "tbc",
+   "source": {
+    "label": "switchsg.org",
+    "url": "https://switchsg.org/"
+   },
+   "checked": "2026-11-23",
+   "added": "2026-11-23"
   },
   {
    "id": "cai27",
